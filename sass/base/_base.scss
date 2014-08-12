@@ -14,13 +14,13 @@ $site-gutters: 30;
 
 $fluid-col: $col-size / $max-width * 100%;
 $fluid-col-gutters: $col-gutters / $max-width * 100%;
-$fulid-col-total: $col-total / $max-width * 100%;
+$fluid-col-total: $col-total / $max-width * 100%;
 $fluid-site-gutters: $site-gutters / $max-width * 100%;
 
 $fc: $fluid-col;
 $fcg: $fluid-col-gutters;
 $fct: $fluid-col-total;
-$fsg: $fluid-sute-gutters;
+$fsg: $fluid-site-gutters;
 
 
 /**
