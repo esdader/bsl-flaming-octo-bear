@@ -6,6 +6,23 @@
  * Dimensions
  */
 
+$max-width: 1020;
+$col-size: 60;
+$col-gutters: 10;
+$col-total: 80;
+$site-gutters: 30;
+
+$fluid-col: $col-size / $max-width * 100%;
+$fluid-col-gutters: $col-gutters / $max-width * 100%;
+$fulid-col-total: $col-total / $max-width * 100%;
+$fluid-site-gutters: $site-gutters / $max-width * 100%;
+
+$fc: $fluid-col;
+$fcg: $fluid-col-gutters;
+$fct: $fluid-col-total;
+$fsg: $fluid-sute-gutters;
+
+
 /**
  * colors
  */
@@ -19,11 +36,21 @@ $yellow: $gold;
 $gray: #424242;
 $black: $gray;
 
-
-
 /**
  * fonts 
  */
+
+$font-family: 'PT Sans', sans-serif;
+
+body {
+    font-family: $font-family;
+}
+
+$big-headline: 72;
+$med-headline: 30;
+$small-headline: 18;
+$normal-body: 14;
+$small-body: 10;
 
 /**
  * Some defautls
