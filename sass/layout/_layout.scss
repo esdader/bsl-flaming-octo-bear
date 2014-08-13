@@ -8,12 +8,31 @@
  */
 
 
+.l-horizontal-nav {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	@extend .clearfix;
+
+	li {
+		float: left;
+	}	
+}
+
+
 $columns: 12;
 
 .col {
 	// width: $fluid-col-total;
 	padding: 0 $fluid-col-gutters;
 	float: left;
+	position: relative;
+	min-height: 1px;
+
+	img {
+		max-width: 100%;
+		height: auto;
+	}
 }
 
 %no-gutters {
@@ -51,11 +70,16 @@ $columns: 12;
  */
 
 .l-header-con {
+ 	position: fixed;
+ 	left: 0;
+ 	top: 0;
+ 	width: 100%;
  	line-height: 50 / 16 * 1em;
  	background-color: $gray;
 }
 
 .l-header {
+	width: 100%;
 	max-width: $max-width * 1px;
 	margin: 0 auto;
 	padding: 0 $fluid-site-gutters;

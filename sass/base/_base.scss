@@ -35,6 +35,7 @@ $gold: #ffb000;
 $yellow: $gold;
 $gray: #424242;
 $black: $gray;
+$white: #fff;
 
 /**
  * fonts 
@@ -51,6 +52,12 @@ $med-headline: 30;
 $small-headline: 18;
 $normal-body: 14;
 $small-body: 10;
+
+$e-big-headline: $big-headline / 16 * 1em;
+$e-normal-body: $normal-body / 16 * 1em;
+
+$normal: 400;
+$bold: 700;
 
 /**
  * Some defautls

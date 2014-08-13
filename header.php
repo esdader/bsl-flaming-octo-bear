@@ -26,3 +26,32 @@
     <?php wp_head(); ?>
 </head>
 <body>
+  <div class="l-header-con">
+    <div class="l-header">
+      <div class="col-2">
+        <img class="main-logo" src="<?php echo get_bloginfo('template_directory'); ?>/img/logo.png" alt="<?php echo get_bloginfo('name'); ?>">
+      </div>
+      <nav class="col-5 offset-1 main-nav">
+        <ul class="l-horizontal-nav">
+          <li>
+            <a href="#add-link">Home</a>
+          </li>
+          <li>
+            <a href="#add-link">About</a>
+          </li>
+          <li>
+            <a href="#add-link">Tools</a>
+          </li>
+          <li>
+            <a href="#add-link">Studies</a>
+          </li>
+          <li>
+            <a href="#add-link">News</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="social-icons col-1 no-gutters offset-2">
+        <img src="<?php echo get_bloginfo('template_directory'); ?>/img/social_icons.png" alt="Social Icons">
+      </div>
+    </div>
+  </div>

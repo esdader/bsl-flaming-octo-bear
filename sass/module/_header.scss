@@ -1,0 +1,51 @@
+/*
+ * Header
+ */
+
+ .main-logo {
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.main-nav {
+	li {
+		width: 1 / 5 * 100%;
+		border-top: 3px solid transparent;
+		
+		&.active,
+		&:hover {
+			border-color: $gold;
+
+			a {
+				color: $gold;
+			}
+		}
+
+		-webkit-transition: border-color 300ms ease-out;
+	       -moz-transition: border-color 300ms ease-out;
+             -o-transition: border-color 300ms ease-out;
+                transition: border-color 300ms ease-out;
+	}
+
+	a {
+		line-height: 1;
+		font-size: $e-normal-body;
+		font-weight: $bold;
+		text-transform: uppercase;
+		color: $white;
+		text-decoration: none;
+		letter-spacing: 1px;
+		padding: .75em 0;
+
+		-webkit-transition: color 300ms ease-out;
+	       -moz-transition: color 300ms ease-out;
+             -o-transition: color 300ms ease-out;
+                transition: color 300ms ease-out;
+	}
+
+}
+
+.social-icons {
+	line-height: 50 / 16 * 1em;
+}
