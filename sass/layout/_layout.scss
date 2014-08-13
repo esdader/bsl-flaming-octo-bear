@@ -1,0 +1,63 @@
+/*
+ * Main Layout
+ */
+
+
+/*
+ * Site wide 
+ */
+
+
+$columns: 12;
+
+.col {
+	// width: $fluid-col-total;
+	padding: 0 $fluid-col-gutters;
+	float: left;
+}
+
+%no-gutters {
+	padding: 0;
+}
+
+@mixin col-list {
+  @for $i from 1 through $columns {
+  	.col-#{$i} { 
+  		@extend .col;
+  		width: $i / 12 * 100%;
+  	}
+  	.col-#{$i}.no-gutters { 
+  		@extend %no-gutters;
+  	}
+  }
+}
+
+@include col-list;
+
+@mixin col-offset-list {
+  @for $x from 1 through $columns - 1 {
+  	.offset-#{$x} {
+  		margin-left: $x / 12 * 100%;
+  	}
+  }
+}
+
+@include col-offset-list;
+
+ 
+
+/* 
+ * Header
+ */
+
+.l-header-con {
+ 	line-height: 50 / 16 * 1em;
+ 	background-color: $gray;
+}
+
+.l-header {
+	max-width: $max-width * 1px;
+	margin: 0 auto;
+	padding: 0 $fluid-site-gutters;
+	line-height: 50 / 16 * 1em;
+}
