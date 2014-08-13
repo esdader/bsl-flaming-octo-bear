@@ -1,5 +1,7 @@
 <?php get_header(); ?>
 
-<p>Hello world! This is HTML5 Boilerplate.</p>
+<div class="l-container">
+
+</div>
 
 <?php get_footer(); ?>

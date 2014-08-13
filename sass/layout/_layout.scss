@@ -73,6 +73,7 @@ $columns: 12;
  	position: fixed;
  	left: 0;
  	top: 0;
+ 	z-index: 999;
  	width: 100%;
  	line-height: 50 / 16 * 1em;
  	background-color: $gray;
@@ -85,3 +86,28 @@ $columns: 12;
 	padding: 0 $fluid-site-gutters;
 	line-height: 50 / 16 * 1em;
 }
+
+/* 
+ * footer
+ */
+
+.l-footer-con {
+ 	width: 100%;
+ 	padding-bottom: 220 / 16 * 1em;
+ 	background-color: $gray;
+}
+
+.l-footer {
+	@extend .clearfix;
+	width: 100%;
+	max-width: $max-width * 1px;
+	margin: 0 auto;
+	padding: (40 / 16 * 1em) $fluid-site-gutters 0;
+}
+
+/*
+ * main container
+ */
+ .l-container {
+ 	min-height: 40em;
+ }
