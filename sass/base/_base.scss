@@ -48,12 +48,14 @@ body {
 }
 
 $big-headline: 72;
+$big-med-headline: 60;
 $med-headline: 30;
 $small-headline: 18;
 $normal-body: 14;
 $small-body: 10;
 
 $e-big-headline: $big-headline / 16 * 1em;
+$e-big-med-headline: $big-med-headline / 16 * 1em;
 $e-normal-body: $normal-body / 16 * 1em;
 $e-small-body: $small-body / 16 * 1em;
 
