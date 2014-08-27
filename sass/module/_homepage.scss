@@ -1,0 +1,17 @@
+/*
+ * Homepage
+ */
+ 
+.home-copy {
+	width: 100%;
+	max-width: $max-width * 1px;
+	margin: 0 auto;
+	@extend .clearfix;
+	padding-top: 20em;
+}
+
+.home-title {
+	font-size: $e-big-med-headline;
+	color: #fff;
+	text-align: center;
+}
