@@ -105,6 +105,24 @@ $columns: 12;
 	padding: (40 / 16 * 1em) $fluid-site-gutters 0;
 }
 
+// short footers
+.l-short-footer-con {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+ 	width: 100%;
+ 	line-height: 44 / 16 * 1em;
+ 	background-color: $gray;
+}
+
+.l-short-footer {
+	@extend .clearfix;
+	width: 100%;
+	max-width: $max-width * 1px;
+	margin: 0 auto;
+	line-height: 44 / 16 * 1em;
+}
+
 /*
  * main container
  */

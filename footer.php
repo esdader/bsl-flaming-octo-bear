@@ -1,22 +1,36 @@
-<div class="l-footer-con">
-	<div class="l-footer">
-		<div class="footer-addy col-3 offset-1">
-			<h4 class="addy-title"><?php echo get_bloginfo('name'); ?></h4>
-			<p>2222 Rio Grande<br>
-				Third Floor, Bldg C<br>
-				Austin, TX 78705
-			</p>
-			<p>
-				<a href="mailto:contact@behavioralsciencelab.com">Contact@behavioralsciencelab.com</a>
-			</p>
-		</div>
-		<div class="footer-phone-numbers col-2">
-			<p>T: (512) 476.7949<br>
-			   F: (512) 476.7950
-			</p>
+<?php if (!is_front_page() ) :?>
+	<div class="l-footer-con">
+		<div class="l-footer">
+			<div class="footer-addy col-3 offset-1">
+				<h4 class="addy-title"><?php echo get_bloginfo('name'); ?></h4>
+				<p>2222 Rio Grande<br>
+					Third Floor, Bldg C<br>
+					Austin, TX 78705
+				</p>
+				<p>
+					<a href="mailto:contact@behavioralsciencelab.com">Contact@behavioralsciencelab.com</a>
+				</p>
+			</div>
+			<div class="footer-phone-numbers col-2">
+				<p>T: (512) 476.7949<br>
+				   F: (512) 476.7950
+				</p>
+			</div>
 		</div>
 	</div>
-</div>
+<?php else: ?>
+	<div class="l-short-footer-con">
+		<div class="l-short-footer">
+			<ul class="l-horizontal-nav short-footer">
+				<li class="short-footer-name"><?php echo get_bloginfo('name'); ?></li>
+				<li>2222 Rio Grande Third Floor, Bldg C Austin, TX 78705</li>
+				<li>T: (512) 476.7949</li>
+				<li>F: (512) 476.7950</li>
+				<li class="short-footer-email"><a href="mailto:contact@behavioralsciencelab.com">Contact@behavioralsciencelab.com</a></li>
+			</ul>
+		</div>
+	</div>
+<?php endif; ?>
     <?php wp_footer(); ?>
     
     <script>
