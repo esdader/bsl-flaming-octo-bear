@@ -2,11 +2,9 @@
    Site Variables
    ========================================================================== */
 
-/**
- * Dimensions
- */
 
 $max-width: 1020;
+$max-width-px: 1020px;
 $col-size: 60;
 $col-gutters: 10;
 $col-total: 80;
@@ -22,6 +20,20 @@ $fcg: $fluid-col-gutters;
 $fct: $fluid-col-total;
 $fsg: $fluid-site-gutters;
 
+
+/**
+ * functions
+ */
+
+$browser-context: 16;
+
+@function em($pixels, $context: $browser-context) {
+	@return #{$pixels/$context}em;
+}
+
+@function per($px, $context-width: $max-width) {
+	@return $px / $context-width * 100%;
+}
 
 /**
  * colors

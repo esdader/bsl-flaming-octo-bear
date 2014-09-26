@@ -1,6 +1,13 @@
 <?php
 
 /**
+ * Add custom post types
+ */
+
+require get_template_directory() . '/post-types/team-members.php';
+
+
+/**
  * Enqueue styles and scripts
  */
 

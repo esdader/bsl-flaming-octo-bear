@@ -1,9 +1,9 @@
-/*
+/**
  * Main Layout
  */
 
 
-/*
+/**
  * Site wide 
  */
 
@@ -65,7 +65,7 @@ $columns: 12;
 
  
 
-/* 
+/** 
  * Header
  */
 
@@ -87,7 +87,7 @@ $columns: 12;
 	line-height: 50 / 16 * 1em;
 }
 
-/* 
+/** 
  * footer
  */
 
@@ -123,9 +123,37 @@ $columns: 12;
 	line-height: 44 / 16 * 1em;
 }
 
-/*
+/**
  * main container
  */
  .l-container {
  	margin-top: 50 / 16 * 1em;
  }
+
+/**
+ * inner con
+ */
+.l-inner {
+	width: 100%;
+	max-width: $max-width-px;
+	margin: 0 auto;
+}
+
+/**
+ * About page
+ */
+.l-about-why {
+	width: 100%;
+	min-height: em(525);
+	padding-top: em(220);
+	background-image: url(../img/about_why.jpg);
+	background-size: cover;
+}
+
+.l-about-reimagine {
+	width: 100%;
+	min-height: em(500);
+	padding-top: em(126);
+	background-image: url(../img/about_reimagine.jpg);
+	background-size: cover;
+}

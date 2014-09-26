@@ -1,0 +1,20 @@
+.about-why-heading {
+	font-size: em($med-headline);
+	color: #fff;
+	text-align: center;
+}
+
+.about-reimagine-heading {
+	font-size: em($med-headline);
+	color: $gold;
+}
+
+.about-reimagine-content {
+	p,
+	li,
+	blockquote {
+		font-size: em(13);
+		color: $dark-blue;
+		line-height: 1.4;
+	}
+}
