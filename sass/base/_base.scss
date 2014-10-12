@@ -59,6 +59,7 @@ $font-family: 'PT Sans', sans-serif;
 
 body {
     font-family: $font-family;
+    color: $gray;
 }
 
 $big-headline: 72;
@@ -96,4 +97,28 @@ p,
 ul,
 ol {
 	margin-top: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+b,
+strong {
+	font-weight: $bold;
+}
+
+.subheading {
+	font-size: em(30);
+	color: $dark-blue;
+
+	&.alt-color {
+		color: $teal;
+	}
+}
+
+.center {
+	text-align: center;
 }

@@ -30,7 +30,10 @@
 
 
 .short-footer {
+	display: inline-block;
+	vertical-align: top;
 	line-height: 44 / 16 * 1em;
+
 
 	li {
 		font-weight: $bold;
@@ -61,4 +64,29 @@
 	.short-footer-name {
 		color: $gold;
 	}
+}
+
+.footer-social-link {
+	@extend .ir;
+	display: block;
+	width: 25px;
+	height: 25px;
+	background-image: url(../img/social_icons_footer.svg);
+	background-repeat: no-repeat;
+
+	.no-svg & {
+		background-image: url(../img/social_icons_footer.png);
+	}
+}
+
+.footer-twitter {
+	background-position: 0 0;
+}
+
+.footer-linkedin {
+	background-position: -32px 0;
+}
+
+.footer-email {
+	background-position: -64px 0;
 }

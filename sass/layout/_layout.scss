@@ -7,7 +7,7 @@
  * Site wide 
  */
 
-
+.l-horizontal-list,
 .l-horizontal-nav {
 	list-style: none;
 	margin: 0;
@@ -63,7 +63,9 @@ $columns: 12;
 
 @include col-offset-list;
 
- 
+.row {
+	clear: both;
+}
 
 /** 
  * Header
@@ -82,9 +84,14 @@ $columns: 12;
 .l-header {
 	width: 100%;
 	max-width: $max-width * 1px;
+	min-width: $max-width-px;
 	margin: 0 auto;
 	padding: 0 $fluid-site-gutters;
 	line-height: 50 / 16 * 1em;
+}
+
+.l-header-social-icons.no-gutters {
+	padding-top: 1em;
 }
 
 /** 
@@ -93,7 +100,7 @@ $columns: 12;
 
 .l-footer-con {
  	width: 100%;
- 	padding-bottom: 220 / 16 * 1em;
+ 	padding-bottom: 140 / 16 * 1em;
  	background-color: $gray;
 }
 
@@ -101,6 +108,7 @@ $columns: 12;
 	@extend .clearfix;
 	width: 100%;
 	max-width: $max-width * 1px;
+	min-width: $max-width-px;
 	margin: 0 auto;
 	padding: (40 / 16 * 1em) $fluid-site-gutters 0;
 }
@@ -121,6 +129,7 @@ $columns: 12;
 	max-width: $max-width * 1px;
 	margin: 0 auto;
 	line-height: 44 / 16 * 1em;
+	text-align: center;
 }
 
 /**
@@ -131,11 +140,27 @@ $columns: 12;
  }
 
 /**
- * inner con
+ * helper con
  */
+ .l-outer {
+ 	width: 100%;
+ 	@extend .clearfix;
+ }
+
 .l-inner {
 	width: 100%;
 	max-width: $max-width-px;
+	min-width: $max-width-px;
+	margin: 0 auto;
+	padding: 0 30px;
+	@extend .clearfix;
+
+	&.is-expanded {
+		padding: 0;
+	}
+}
+
+.l-center {
 	margin: 0 auto;
 }
 
@@ -146,7 +171,7 @@ $columns: 12;
 	width: 100%;
 	min-height: em(525);
 	padding-top: em(220);
-	background-image: url(../img/about_why.jpg);
+	background: url(../img/about_why2.jpg) no-repeat center center;
 	background-size: cover;
 }
 
@@ -154,6 +179,70 @@ $columns: 12;
 	width: 100%;
 	min-height: em(500);
 	padding-top: em(126);
-	background-image: url(../img/about_reimagine.jpg);
+	background: url(../img/about_reimagine2.jpg) no-repeat center center;
 	background-size: cover;
+
+}
+
+.l-about-map {
+	width: 100%;
+	position: relative;
+	height: 646px;
+
+	.map {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 646px;
+	}
+}
+
+.l-about-map-inner {
+	position: relative;
+	z-index: 80;
+}
+
+.l-about-bubble {
+	width: 298px;
+	height: 298px;
+	margin-top: (285/ 646) * 100%;
+	background: $dark-blue;
+	border-radius: 50%;
+	color: #fff;
+	text-align: center;
+
+	p {
+		font-size: em(13);
+	}
+}
+
+.bubble-intro {
+	padding: em(56) em(70) 0;
+	margin-bottom: em(18, 13);
+	text-align: center;
+	color: $orange;
+}
+
+.bubble-contact {
+	margin-bottom: 1.5em;
+	a {
+		color: #fff;
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+		}
+
+		span {
+			color: $orange;
+		}
+	}
+}
+
+.bubble-heading {
+	margin-bottom: .5em;
+	font-weight: normal;
+	text-align: center;
+	font-size: em(13);
 }

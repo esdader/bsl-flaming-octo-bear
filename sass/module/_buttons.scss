@@ -1,0 +1,34 @@
+/**
+ * buttons
+ */
+
+ .watch-video {
+ 	padding: 7px 22px 5px;
+ 	border: 2px solid $gold;
+	background: none;
+	color: $dark-blue;
+	line-height: 1;
+	font-size: em(20);
+	font-weight: 700;
+ }
+
+ .watch-webinar {
+	@extend .watch-video;
+	width: 168px;
+	padding-left: 0;
+	padding-right: 0;
+	margin-left: 40px
+ }
+
+ .download {
+	@extend .watch-video;
+	width: 168px;
+	padding-left: 0;
+	padding-right: 0;
+ }
+
+ .close-btn {
+ 	border: 0;
+ 	background: 0;
+ 	padding: 0;
+ }

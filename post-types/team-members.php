@@ -7,7 +7,7 @@ function team_members_init() {
 		'show_in_nav_menus' => true,
 		'show_ui'           => true,
 		'supports'          => array( 'title', 'editor'),
-		'has_archive'       => true,
+		'has_archive'       => false,
 		'query_var'         => true,
 		'rewrite'           => true,
 		'labels'            => array(

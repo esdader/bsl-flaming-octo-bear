@@ -1,7 +1,17 @@
-/* 
- * Homepage layout
+
+/**
+ * homepage layout
  */
 
-.home-section {
+.l-home-section {
+	position: relative;
+}
 
+.l-home-copy {
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 10;
+	width: 100%;
+	margin-top: 15%;
 }

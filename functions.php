@@ -5,6 +5,7 @@
  */
 
 require get_template_directory() . '/post-types/team-members.php';
+require get_template_directory() . '/post-types/studies.php';
 
 
 /**
@@ -16,7 +17,9 @@ function starter_theme_scripts() {
 	// main stylesheet
 	wp_enqueue_style( 
 		'main', 
-		get_template_directory_uri() . '/css/main.css'
+		get_template_directory_uri() . '/css/main.css',
+		array(),
+		'0.0.98'
 	);
 	
 	// modernizr
@@ -59,7 +62,7 @@ function starter_theme_scripts() {
 				'jquery',
 				'plugins'
 			),
-		false,
+		'0.0.4',
 		true
 
 	);
@@ -97,10 +100,26 @@ if ( function_exists( 'add_theme_support' ) ) {
  * not active by default because WordPress will save images in the example sizes
  */
 
-// if ( function_exists( 'add_image_size' ) ) { 
-// 	add_image_size( 'category-thumb', 300, 9999 ); //300 pixels wide (and unlimited height)
-// 	add_image_size( 'homepage-thumb', 220, 180, true ); //(cropped)
-// }
+if ( function_exists( 'add_image_size' ) ) { 
+	add_image_size( 'blog-full-width', 800, 9999 );
+}
+
+/**
+ * Social media link generators
+ */
+
+function createLinkedInLink($earl, $title, $summary, $source) {
+
+	$earl = urlencode($earl);
+	$title = urlencode($title);
+	$summary = urlencode($summary);
+	$source = urlencode($source);
+
+	$link = "http://www.linkedin.com/shareArticle?mini=true&url={$earl}&title={$title}&summary={$summary}&source={$source}";
+
+	return $link;
+}
+
 
 
 ?>

@@ -1,0 +1,181 @@
+/**
+ * tools page
+ */
+
+.l-tools-intro-outer {
+	min-height: em(600);
+	background: url(../img/about_why.jpg) no-repeat center center;
+	background-size: cover;
+}
+
+.l-tools-intro-heading {
+	h1 {
+		padding: em(260, 36) .5em 0;
+		font-size: em(36);
+		text-align: center;
+		color: #fff;
+	}
+}
+
+.swatch-gray {
+	background-color: #e1e1e1;
+}
+
+.has-down-arrow {
+	position: relative;
+}
+
+.has-down-arrow:after {
+	position: absolute;
+	bottom: -35px;
+	left: 50%;
+	z-index: 20;
+	margin-left: -36px;
+	content: " ";
+	width: 0; 
+	height: 0; 
+	border-left: 36px solid transparent;
+	border-right: 36px solid transparent;
+	border-top: 36px solid #fff;
+}
+
+.has-down-arrow.swatch-gray:after {
+	border-top-color: #e1e1e1;
+}
+
+.tools-content-section {
+	padding: em(100, 14) 1em 10em;
+	text-align: center;
+
+	p,
+	li,
+	blockquote {
+		font-size: em(14);	
+	}
+
+	p {
+		margin-bottom: 1.5em;
+	}
+}
+
+.l-tools-logos-con {
+	padding-top: em(174);
+	padding-bottom: em(180);
+
+	.section-heading {
+		color: $dark-blue;
+		font-size: em(30);
+		text-align: center;
+		margin-bottom: 0;
+	}
+}
+
+.tools-logos {
+
+	li {
+		width: 300px;
+		margin: em(63) per(90) 0;
+		background: #e1e1e1;
+
+		img {
+			max-width: 100%;
+			height: auto;
+			padding: em(30) 0;
+		}
+
+		a {
+			display: block;
+			text-align: center;
+			width: 100%;
+
+		}
+	}
+	
+}
+
+.l-tool-intro-panel-con {
+	background-color: #e1e1e1;
+}
+
+.brand-embrace-con {
+	background: url(../img/brandembrace_bg.jpg) no-repeat center center;
+	background-size: cover; 
+}
+
+.mindguide-con {
+	background: url(../img/mindguide_BG_2000px.jpg) no-repeat center center;
+	background-size: cover; 
+}
+
+.tool-intro-panel {
+	padding-top: em(140);
+	padding-bottom: em(180);
+	text-align: center;
+}
+
+.tool-intro-main-heading {
+	font-size: em(30);
+	color: $teal;
+}
+
+.l-tool-callout-panel-con {
+	padding-top: em(140);
+	padding-bottom: em(145);
+}
+
+.callout-panel {
+	text-align: center;
+}
+
+.callout-panel.shrink-it {
+	.subheading {
+		padding: 0 30px;
+	}
+}
+
+.l-tool-three-icon-view-con {
+	padding-top: em(60);
+	padding-bottom: em(90);
+}
+
+.three-icon-view-title {
+	margin-top: em(40, 14);
+	color: $teal;
+	font-size: em(14);
+	margin-bottom: 0;
+	text-transform: uppercase;
+}
+
+.three-icon-view-desc {
+	font-size: em(14);
+	padding: 0 20px;
+	margin-bottom: 0;
+}
+
+.l-tool-large-infographic-con {
+	padding-top: em(120);
+	padding-bottom: em(100);
+}
+
+.tool-large-infographic-con .shrink-it .subheading {
+	padding: 0 40px;
+}
+
+.l-tool-multi-detail-panel {
+	padding-top: em(100);
+	padding-bottom: em(140);
+
+	p,
+	li,
+	blockquote {
+		font-size: em(14);
+	}
+}
+
+.multi-detail-mid-section {
+	margin-top: em(136);
+}
+
+.multi-detail-bottom-section {
+	margin-top: em(60);
+}

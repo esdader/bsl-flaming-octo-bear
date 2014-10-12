@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title></title>
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=1020">
     <script type="text/javascript">
       WebFontConfig = {
         google: { families: [ 'PT+Sans:400,700,400italic,700italic:latin' ] }
@@ -25,33 +25,43 @@
     </script>    
     <?php wp_head(); ?>
 </head>
-<body>
+<body <?php body_class(); ?>>
+  <?php
+    $post_id = $post->ID;
+  ?>
   <div class="l-header-con">
     <div class="l-header">
-      <div class="col-2">
-        <img class="main-logo" src="<?php echo get_bloginfo('template_directory'); ?>/img/logo.png" alt="<?php echo get_bloginfo('name'); ?>">
+      <div class="col-2 no-gutters">
+        <div class="main-logo-con">
+          <img class="main-logo" src="<?php echo get_bloginfo('template_directory'); ?>/img/logo.png" alt="<?php echo get_bloginfo('name'); ?>">
+        </div>
       </div>
       <nav class="col-5 offset-1 main-nav">
         <ul class="l-horizontal-nav">
-          <li>
-            <a href="#add-link">Home</a>
+          <li<?php if ($post_id == 13) echo ' class="active"'; ?>>
+            <a href="<?php echo site_url(); ?>">Home</a>
           </li>
-          <li>
-            <a href="#add-link">About</a>
+          <li<?php if ($post_id == 5) echo ' class="active"'; ?>>
+            <a href="<?php echo get_page_link(5); ?>">About</a>
           </li>
-          <li>
-            <a href="#add-link">Tools</a>
+          <li<?php if ($post_id == 7) echo ' class="active"'; ?>>
+            <a href="<?php echo get_page_link(7); ?>">Tools</a>
           </li>
-          <li>
-            <a href="#add-link">Studies</a>
+          <li<?php if ($post_id == 9) echo ' class="active"'; ?>>
+            <a href="<?php echo get_page_link(9); ?>">Studies</a>
           </li>
-          <li>
-            <a href="#add-link">News</a>
+          <li<?php if (is_home()) echo ' class="active"'; ?>>
+            <a href="<?php echo get_page_link(11); ?>">News</a>
           </li>
         </ul>
       </nav>
-      <div class="social-icons col-1 no-gutters offset-2">
-        <img src="<?php echo get_bloginfo('template_directory'); ?>/img/social_icons.png" alt="Social Icons">
+      <div class="l-header-social-icons col-1 no-gutters offset-2">
+        <ul class="l-horizontal-list header-footer-social-media-links gen-social-media-links">
+          <li><a class="header-footer-social-link header-footer-twitter" href="http://twitter.com/BSLinsights" target="_blank">Share on Twitter</a></li>
+          <li><a class="header-footer-social-link header-footer-linkedin" href="https://www.linkedin.com/company/behavioral-scienc-lab" target="_blank">Share on LinkedIn</a></li>
+          <li><a class="header-footer-social-link header-footer-email" href="mailto:contact@behavioralsciencelab.com" target="_blank">Email us</a></li>
+
+        </ul>
       </div>
     </div>
   </div>

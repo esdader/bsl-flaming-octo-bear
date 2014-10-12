@@ -2,10 +2,36 @@
  * Header
  */
 
- .main-logo {
+.main-logo-con {
 	position: absolute;
 	left: 0;
 	top: 0;
+	z-index: 90;
+	width: 100%;
+	height: em(154);
+	padding: em(72) em(14) em(14) 0;
+	text-align: right;
+	background-color: $gold;
+	transition-property: height, width, top, left, padding;
+	transition-duration: 300ms;
+
+    img {
+    	display: inline-block;
+    	width: 113px;
+    	height: 68px;
+    	transition-property: height, width, top, left;
+		transition-duration: 300ms;
+    }
+
+	.show-short-view & {
+		padding: em(2) em(10) 0 0;
+		height: em(53);
+
+		img {
+			height: 38px;
+			width: 63px;
+		}
+	}
 }
 
 .main-nav {
@@ -46,6 +72,37 @@
 
 }
 
-.social-icons {
-	line-height: 50 / 16 * 1em;
+.gen-social-media-links {
+	li {
+		margin-left: 6px;
+
+		&:first-child {
+			margin-left: 0;
+		}
+	}
+}
+
+.header-footer-social-link {
+	@extend .ir;
+	display: block;
+	width: 18px;
+	height: 18px;
+	background-image: url(../img/social_icons.svg);
+	background-repeat: no-repeat;
+
+	.no-svg & {
+		background-image: url(../img/social_icons.png);
+	}
+}
+
+.header-footer-twitter {
+	background-position: 0 0;
+}
+
+.header-footer-linkedin {
+	background-position: -23px 0;
+}
+
+.header-footer-email {
+	background-position: -46px 0;
 }

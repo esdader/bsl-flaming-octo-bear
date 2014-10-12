@@ -16,6 +16,14 @@
 				   F: (512) 476.7950
 				</p>
 			</div>
+			<div class="l-footer-social-icons col-2 no-gutters offset-4">
+			  <ul class="l-horizontal-list footer-social-media-links gen-social-media-links">
+			    <li><a class="footer-social-link footer-twitter" href="http://twitter.com/BSLinsights" target="_blank">Share on Twitter</a></li>
+			    <li><a class="footer-social-link footer-linkedin" href="https://www.linkedin.com/company/behavioral-scienc-lab" target="_blank">Share on LinkedIn</a></li>
+			    <li><a class="footer-social-link footer-email" href="mailto:contact@behavioralsciencelab.com" target="_blank">Email us</a></li>
+
+			  </ul>
+			</div>
 		</div>
 	</div>
 <?php else: ?>
@@ -34,7 +42,7 @@
     <?php wp_footer(); ?>
     
     <script>
-        // var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+        // var _gaq=[['_setAccount','UA-45434526-1'],['_trackPageview']];
         // (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
         // g.src='//www.google-analytics.com/ga.js';
         // s.parentNode.insertBefore(g,s)}(document,'script'));
