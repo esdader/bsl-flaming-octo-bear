@@ -57,8 +57,8 @@
       </nav>
       <div class="l-header-social-icons col-1 no-gutters offset-2">
         <ul class="l-horizontal-list header-footer-social-media-links gen-social-media-links">
-          <li><a class="header-footer-social-link header-footer-twitter" href="http://twitter.com/BSLinsights" target="_blank">Share on Twitter</a></li>
-          <li><a class="header-footer-social-link header-footer-linkedin" href="https://www.linkedin.com/company/behavioral-scienc-lab" target="_blank">Share on LinkedIn</a></li>
+          <li><a class="header-footer-social-link header-footer-twitter" href="http://twitter.com/BSLinsights" target="_blank">Follow on Twitter</a></li>
+          <li><a class="header-footer-social-link header-footer-linkedin" href="https://www.linkedin.com/company/behavioral-science-lab" target="_blank">Follow on LinkedIn</a></li>
           <li><a class="header-footer-social-link header-footer-email" href="mailto:contact@behavioralsciencelab.com" target="_blank">Email us</a></li>
 
         </ul>
