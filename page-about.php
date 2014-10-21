@@ -49,7 +49,7 @@ get_header(); ?>
 									'post_type'     => 'team-members',
 									'post_per_page' => -1,
 									'order'         => 'ASC',
-									'order_by'      => 'menu_order'
+									'orderby'      => 'menu_order'
 								);
 						$tm = new WP_Query($args);
 					?>
@@ -75,13 +75,13 @@ get_header(); ?>
 								</div>
 								<ul class="l-horizontal-list tm-social-media-links-con clearfix">
 									<?php if ( get_field('tm_twitter') ) : ?>
-									<li><a class="tm-social-links tm-twitter" href="<?php the_field('tm_twitter'); ?>">Follow on Twitter</a></li>
+									<li><a class="tm-social-links tm-twitter" href="<?php the_field('tm_twitter'); ?>"  target="_blank">Follow on Twitter</a></li>
 									<?php endif; ?>
 									<?php if ( get_field('tm_linkedin') ) : ?>
-									<li><a class="tm-social-links tm-linkedin" href="<?php the_field('tm_linkedin'); ?>">Follow on LinkedIn</a></li>
+									<li><a class="tm-social-links tm-linkedin" href="<?php the_field('tm_linkedin'); ?>" target="_blank">Follow on LinkedIn</a></li>
 									<?php endif; ?>
 									<?php if ( get_field('tm_email') ) : ?>
-									<li><a class="tm-social-links tm-email" href="<?php the_field('tm_email'); ?>">Email</a></li>
+									<li><a class="tm-social-links tm-email" href="<?php the_field('tm_email'); ?>" target="_blank">Email</a></li>
 									<?php endif; ?>
 								</ul>
 							</div>
