@@ -34,7 +34,7 @@
 				<li>2222 Rio Grande, Bldg. C, Third Floor Austin, TX 78705</li>
 				<li>T: 512.476.7949</li>
 				<li>F: 512.476.7950</li>
-				<li class="short-footer-email"><a href="mailto:contact@behavioralsciencelab.com">Contact@behavioralsciencelab.com</a></li>
+				<li class="short-footer-email"><a href="mailto:contact@behavioralsciencelab.com">contact@behavioralsciencelab.com</a></li>
 			</ul>
 		</div>
 	</div>
