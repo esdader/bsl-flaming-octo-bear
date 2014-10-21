@@ -11,7 +11,7 @@
 		<div class="l-home-copy">
 			<div class="l-inner">
 				<h1 class="col-7 offset-3 home-title no-gutters">
-					Yes, but WHY 
+					Yes, but <em>why</em>? 
 				</h1>
 			</div>
 		</div>	
