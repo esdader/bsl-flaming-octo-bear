@@ -10,7 +10,7 @@ get_header(); ?>
 	<div class="l-inner l-studies-intro">
 		<div class="row col-8 offset-2">
 			<h1 class="subheading center">
-				Step into our world as we shed light on the future of successful marketing strategies in realworld applications. 
+				Step into our world as we shed light on the future of successful marketing strategies in real-world applications. 
 			</h1>
 		</div>
 	</div>

@@ -20,7 +20,7 @@ get_header(); ?>
 				
 				<p>Because individuals often cannot conceptualize and explain their behavior, we invent and apply behavioral economic research tools that allow people to reveal the true basis of their behavior.</p>
 
-				<p>By understanding <em>why</em> people chose to interact with one’s brand, we help our clients develop creative, innovative, and practical solutions.</p>
+				<p>By understanding <em>why</em> people chose to interact with one’s brand, we help our clients develop creative, innovative and practical solutions.</p>
 
 			</section>
 		</div>
@@ -78,7 +78,7 @@ get_header(); ?>
 	<div class="l-outer l-tool-three-icon-view-con has-down-arrow swatch-gray">
 		<div class="l-inner">
 			<div class="row col-8 offset-2 no-gutters">
-				<h2 class="subheading center">MindGuide&#8480; is an unbiased, consumer-generated research technique identifying ...</h2>
+				<h2 class="subheading center">MindGuide&#8480; is an unbiased, consumer-generated research technique identifying...</h2>
 			</div>
 			<div class="row tool-three-icon-view">
 				<div class="tool-three-icon-single-view col-4 center">
@@ -90,7 +90,7 @@ get_header(); ?>
 						Decision Elements
 					</h4>
 					<p class="three-icon-view-desc">
-						Identifies cognitive, social, environmental and economic influencers.
+						Identifies cognitive, social, environmental and economic influencers
 					</p>
 				</div>
 				<div class="tool-three-icon-single-view col-4 center">
@@ -102,7 +102,7 @@ get_header(); ?>
 						Decision Blueprint
 					</h4>
 					<p class="three-icon-view-desc">
-						Provides a clear mental map as to why and how decisions are made.
+						Provides a clear mental map as to why and how decisions are made
 					</p>
 				</div>
 				<div class="tool-three-icon-single-view col-4 center">
@@ -111,10 +111,10 @@ get_header(); ?>
 						onerror="this.src='<?php bloginfo('template_directory'); ?>/img/Tools_Mindguide_Audience_icon.png'"
 						alt="MindGuide Audience">
 					<h4 class="three-icon-view-title">
-						Decision Mindsets
+						Decision Mind-sets
 					</h4>
 					<p class="three-icon-view-desc">
-						Types people by similar decision processes — not traditional demographics or psychographics.
+						Types people by similar decision processes — not traditional demographics or psychographics
 					</p>
 				</div>
 				
@@ -185,7 +185,7 @@ get_header(); ?>
 				</div>
 			</div>
 			<div class="row col-8 offset-2 center multi-detail-mid-section">
-				<p>Ultimately, <strong>BrandEmbrace&#8480;</strong> helps brands identify their customers’ true needs across all touchpoints, how those needs are satisfied, and how brands need to continue to develop the relationship to create and maintain stronger brand loyalty.
+				<p>Ultimately, <strong>BrandEmbrace&#8480;</strong> helps brands identify their customers’ true needs across all touch points, how those needs are satisfied and how brands need to continue to develop the relationship to create and maintain stronger brand loyalty.
 			</div>
 			<div class="row col-8 offset-2 center multi-detail-bottom-section">
 				<img 
