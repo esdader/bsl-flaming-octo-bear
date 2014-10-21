@@ -52,7 +52,7 @@ get_header(); ?>
 							<?php echo get_the_date(); ?>
 						</p>
 						<p class="blog-single-meta author-meta">
-							by <?php the_author(); ?>
+							by <?php the_field('news_authors'); ?>
 						</p>
 					</div>
 					<section class="blog-single-content">
