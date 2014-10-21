@@ -108,7 +108,7 @@ get_header(); ?>
 						If you want to understand why people buy your brand, call or email us.
 					</p>
 					<p class="bubble-contact">
-						+1.512.469.7949<br>
+						512.476.7949<br>
 						<a href="mailto:contact@behavioralsciencelab.com"><span>contact</span>@behavioralsciencelab.com</a>
 					</p>
 					<h4 class="bubble-heading">If ever in Austin, stop on by.</h4>
