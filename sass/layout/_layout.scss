@@ -78,7 +78,15 @@ $columns: 12;
  	z-index: 999;
  	width: 100%;
  	line-height: 50 / 16 * 1em;
- 	background-color: $gray;
+
+	-webkit-transition: background-color 300ms ease-out;
+       -moz-transition: background-color 300ms ease-out;
+         -o-transition: background-color 300ms ease-out;
+            transition: background-color 300ms ease-out;
+
+ 	&.show-short-view {
+ 		background-color: $gray;
+ 	}
 }
 
 .l-header {
@@ -136,7 +144,7 @@ $columns: 12;
  * main container
  */
  .l-container {
- 	margin-top: 50 / 16 * 1em;
+ 	// margin-top: 50 / 16 * 1em;
  }
 
 /**
