@@ -6,7 +6,7 @@
 
 get_header(); ?>
 
-<div class="l-container">
+<div class="l-container l-news-main-con">
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 		<div class="l-outer">
 			<div class="hentry l-inner l-blog-single-entry-con single-view-news">

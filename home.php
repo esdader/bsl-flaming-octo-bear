@@ -5,14 +5,14 @@
  */
 
 get_header(); ?>
-<div class="l-container">
-	<div class="l-outer">
+<div class="l-container l-news-main-con">
+	<!-- <div class="l-outer">
 		<div class="l-inner">
 			<div class="row col-6 offset-3 blog-heading">
 				<h2>Stay up to date with our latest discoveries and mindful practices.</h2>
 			</div>
 		</div>
-	</div>
+	</div> -->
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 		<div class="l-outer l-blog-landing-con">
 			<div class="l-inner">
