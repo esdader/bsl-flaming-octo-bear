@@ -19,6 +19,7 @@
         $loadStudyBtn       = $('.js-load-study'),
         $studyCon           = $('.l-study-con'),
         isLogoBig           = true,
+        $backToTopBtn       = $('.back-to-top'),
         currentPos,
         availableHeight,
         aspectRatio,
@@ -260,6 +261,12 @@
         $this.addClass('study-is-open');
         // load the study
         loadStudy(earl, openStudy);
+    });
+
+    $backToTopBtn.on('click', function() {
+        $('html, body').animate({
+            scrollTop: 0
+        }, 300);
     });
 
     function checkBodyPos() {
