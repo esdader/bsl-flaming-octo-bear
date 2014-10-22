@@ -9,6 +9,9 @@
 		</ul>
 	</div>
 </div>
+<button class="back-to-top ir">
+	Back to top
+</button>
     <?php wp_footer(); ?>
     
     <script>
