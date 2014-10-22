@@ -36,7 +36,7 @@
         winH = $window.height();
         winW = $window.width();
 
-        availableHeight = winH - headerH  + 5;
+        availableHeight = winH;
         aspectRatio = winW / availableHeight;
 
         $videoCon.css({

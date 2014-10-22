@@ -37,8 +37,14 @@
 .main-nav {
 	li {
 		width: 1 / 5 * 100%;
-		border-top: 3px solid #fff;
+		border-top: 3px solid #424242;
+
+		.show-short-view & {
+			border-top-color: #fff;
+		}
 		
+		.show-short-view &.active,
+		.show-short-view &:hover,
 		&.active,
 		&:hover {
 			border-color: $gold;
