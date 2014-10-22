@@ -12,7 +12,7 @@ get_header(); ?>
 		<div class="l-inner">
 			<div class="col-8 offset-2">
 				<h1 class="about-why-heading">
-					We are pioneers of innovative research solutions: providing a clear understanding of why and how people make decisions.
+					We are specialists in advanced research methodologies that provide a clear understanding of why and how people make decisions.
 				</h1>
 			</div>
 		</div>
@@ -21,7 +21,7 @@ get_header(); ?>
 		<div class="l-inner">
 			<div class="col-6 offset-1">
 				<h2 class="about-reimagine-heading">
-					We reimagine consumer research.
+					We live to decipher <em>why</em>.
 				</h2>
 			</div>
 			<div class="col-5 offset-1 about-reimagine-content">
