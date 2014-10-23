@@ -13,6 +13,9 @@
 				<h1 class="col-7 offset-3 home-title no-gutters">
 					Yes, but <em>why</em>? 
 				</h1>
+				<div class="col-7 offset-3 home-copy no-gutters">
+					<p>By understanding why people choose to interact with one's brand, we help our clients develop creative, innovative, and practical solutions.</p>
+				</div>
 			</div>
 		</div>	
 	</div>

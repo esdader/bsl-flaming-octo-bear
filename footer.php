@@ -7,6 +7,9 @@
 			<li>F: 512.476.7950</li>
 			<li class="short-footer-email"><a href="mailto:contact@behavioralsciencelab.com">contact@behavioralsciencelab.com</a></li>
 		</ul>
+		<?php if ( is_front_page() ) : ?>
+			<p class="footer-copy">&copy; <?php echo date('Y'); ?> Behavioral Science Lab. All Rights Reserved by Sanders\Wingo Advertising and Sentien Tech.</p>
+		<?php endif; ?>
 	</div>
 </div>
 <button class="back-to-top ir">
