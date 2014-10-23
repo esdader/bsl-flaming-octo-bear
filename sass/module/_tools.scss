@@ -182,37 +182,41 @@
 
 
 // Animations
-
+.tool-three-icon-view {
+	overflow: hidden;
+}
 .tool-three-icon-single-view {
 	opacity: 0;
-	transition: opacity 750ms linear;
+	transition: all 750ms ease-out;
+	transform: translateY(120%);
 
 	img {
 		transform: rotate(60deg);
-		transition: transform 750ms linear;
+		transition: transform 750ms ease-out;
 	}
 }
 
 .tool-icon-2 {
-	transition-delay: 750ms;
+	transition-delay: 300ms;
 
 	img {
-		transition-delay: 750ms;		
+		transition-delay: 300ms;		
 	}
 }
 
 .tool-icon-3 {
-	transition-delay: 1500ms;
+	transition-delay: 600ms;
 
 	img {
-		transition-delay: 1500ms;		
+		transition-delay: 600ms;		
 	}
 }
 
 .show-tool-icons .tool-three-icon-single-view {
 	opacity: 1;
+	transform: none;
 
 	img {
-		transform: rotate(0deg);
+		transform: none;
 	}
 }
