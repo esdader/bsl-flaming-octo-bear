@@ -177,11 +177,14 @@ get_header(); ?>
 						The <strong>BrandEmbrace Index&#8480;</strong> indicates a person’s cumulative experiences with a brand. By identifying all elements that play a role in brand engagement — cognitive, social, environmental and economic — we help our clients’ overall operations become more efficient, more effective and more profitable.
 					</p>
 				</div>
-				<div class="col-3 offset-1">
+				<div class="col-3 offset-1 brandembrace-index-col">
 					<img 
 						src="<?php bloginfo('template_directory'); ?>/img/Tools_chartGraphic.svg"
 						onerror="this.src='<?php bloginfo('template_directory'); ?>/img/Tools_chartGraphic.png'"
 						alt="Brandembrace Chart Graphic">
+						<div class="brandembrace-index-number-con">
+							<span class="brandembrace-index-number">3</span>
+						</div>
 				</div>
 			</div>
 		</div>

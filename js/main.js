@@ -21,6 +21,12 @@
         isLogoBig           = true,
         $backToTopBtn       = $('.back-to-top'),
         $mindguideIcons     = $('.tool-three-icon-view'),
+        $brandEmbraceIndex  = $('.brandembrace-index-number'),
+        $brandEmbraceIndexCon = $('.brandembrace-index-col'),
+        theNumberText         = 3,
+        brandembracePosTrackerTimer,
+        brandembraceIndexPos,
+        brandembraceCounterTimer,
         $mindguideIconsPos,
         mindguideIconsTracker,
         currentPos,
@@ -64,7 +70,6 @@
             });
 
         } else {
-            console.log('not big aspectRatio');
             var marginLeft;
 
             sideCrop = (winH *  photoRatio - winW) / 2;
@@ -160,6 +165,10 @@
      * Animation events
      */
 
+    // helper functions
+    function getRandomInt(min, max) {
+      return Math.floor(Math.random() * (max - min)) + min;
+    }
 
     // mindguide icons
     function checkMindguidePos () {
@@ -169,6 +178,30 @@
         if (winBottom > $mindguideIconsPos) {
             clearInterval(mindguideIconsTracker);
             $mindguideIcons.addClass('show-tool-icons');
+        }
+    }
+
+    // brandembrace index
+    function brandembraceCounter () {
+        $brandEmbraceIndex.text(theNumberText);
+        
+        var num = getRandomInt(1, 4);
+        theNumberText += num;
+        if (theNumberText > 64) {
+          clearInterval(brandembraceCounterTimer);
+          $brandEmbraceIndex.text(64);
+        }
+    }
+
+    // tracking brandebrace position
+
+    function brandembraceIndexPosTracker () {
+        var windowTop = $('body').scrollTop() || $('html').scrollTop(),
+            winBottom = $(window).height() + windowTop - 50;
+
+        if (winBottom > brandembraceIndexPos) {
+            brandembraceCounterTimer = window.setInterval(brandembraceCounter, 100);
+            clearInterval(brandembracePosTrackerTimer);
         }
     }
 
@@ -313,6 +346,11 @@
         if ($mindguideIcons.length > 0) {
             $mindguideIconsPos = $mindguideIcons.offset().top;
             mindguideIconsTracker = window.setInterval(checkMindguidePos, 100);    
+        }
+
+        if ($brandEmbraceIndex.length > 0) {
+            brandembraceIndexPos = $brandEmbraceIndexCon.offset().top;
+            brandembracePosTrackerTimer = window.setInterval(brandembraceIndexPosTracker, 100);
         }
         
         // check for positioning things

@@ -220,3 +220,22 @@
 		transform: none;
 	}
 }
+
+
+// brandembrace index
+
+.brandembrace-index-col {
+	position: relative;
+}
+
+.brandembrace-index-number-con {
+	position: absolute;
+	left: 81px;
+	top: 71px;
+}
+
+.brandembrace-index-number {
+	font-size: em(64);
+	font-weight: $bold;
+	color: #07b3c5;
+}
