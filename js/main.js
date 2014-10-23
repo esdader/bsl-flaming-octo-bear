@@ -20,6 +20,9 @@
         $studyCon           = $('.l-study-con'),
         isLogoBig           = true,
         $backToTopBtn       = $('.back-to-top'),
+        $mindguideIcons     = $('.tool-three-icon-view'),
+        $mindguideIconsPos  = $mindguideIcons.offset.top,
+        $mindguideIconsTracker,
         currentPos,
         availableHeight,
         aspectRatio,
@@ -151,6 +154,20 @@
                 scrollTop: scrollPos
             }, 500);
 
+    }
+
+    /**
+     * Animation events
+     */
+
+
+    // mindguide icons
+    function checkMindguidePos () {
+
+        // $mindguideIcons     = $('.tool-three-icon-view'),
+        // $mindguideIconsPos  = $minguideIcons.offset.top,
+        console.log('foo');
+        // window.clearInterval(mindguideIconsTracker);
     }
 
     /**
@@ -289,6 +306,7 @@
     // kick things off
     function init() {
         var scrollTracker = window.setInterval(checkBodyPos, 100);
+        // var mindguideIconsTracker = window.setInterval(checkMindguidePos, 100);
 
         // check for positioning things
         findAvailableSpace();
