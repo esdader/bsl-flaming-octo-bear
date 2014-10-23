@@ -21,7 +21,7 @@
         isLogoBig           = true,
         $backToTopBtn       = $('.back-to-top'),
         $mindguideIcons     = $('.tool-three-icon-view'),
-        $mindguideIconsPos  = $mindguideIcons.offset().top,
+        $mindguideIconsPos,
         mindguideIconsTracker,
         currentPos,
         availableHeight,
@@ -311,6 +311,7 @@
         
         // track mindguide icons if on page
         if ($mindguideIcons.length > 0) {
+            $mindguideIconsPos = $mindguideIcons.offset().top;
             mindguideIconsTracker = window.setInterval(checkMindguidePos, 100);    
         }
         
