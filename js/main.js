@@ -20,14 +20,17 @@
         $studyCon           = $('.l-study-con'),
         isLogoBig           = true,
         $backToTopBtn       = $('.back-to-top'),
+        $mindguideIcons     = $('.tool-three-icon-view'),
+        $mindguideIconsPos  = $mindguideIcons.offset().top,
+        mindguideIconsTracker,
         currentPos,
         availableHeight,
         aspectRatio,
         sideCrop,
         imageWidth,
         winH,
-        winW;
-
+        winW,
+        i = 0;
 
 
     function findAvailableSpace() {
@@ -151,6 +154,22 @@
                 scrollTop: scrollPos
             }, 500);
 
+    }
+
+    /**
+     * Animation events
+     */
+
+
+    // mindguide icons
+    function checkMindguidePos () {
+        var windowTop = $('body').scrollTop() || $('html').scrollTop(),
+            winBottom = $(window).height() + windowTop - 200;
+
+        if (winBottom > $mindguideIconsPos) {
+            clearInterval(mindguideIconsTracker);
+            $mindguideIcons.addClass('show-tool-icons');
+        }
     }
 
     /**
@@ -289,7 +308,12 @@
     // kick things off
     function init() {
         var scrollTracker = window.setInterval(checkBodyPos, 100);
-
+        
+        // track mindguide icons if on page
+        if ($mindguideIcons.length > 0) {
+            mindguideIconsTracker = window.setInterval(checkMindguidePos, 100);    
+        }
+        
         // check for positioning things
         findAvailableSpace();
     }
