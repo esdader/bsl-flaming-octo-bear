@@ -13,7 +13,7 @@
 	p,
 	li,
 	blockquote {
-		font-size: em(13);
+		font-size: $body-font-size;
 		color: $dark-blue;
 		line-height: 1.4;
 	}
