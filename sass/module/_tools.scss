@@ -179,3 +179,40 @@
 .multi-detail-bottom-section {
 	margin-top: em(60);
 }
+
+
+// Animations
+
+.tool-three-icon-single-view {
+	opacity: 0;
+	transition: opacity 750ms linear;
+
+	img {
+		transform: rotate(60deg);
+		transition: transform 750ms linear;
+	}
+}
+
+.tool-icon-2 {
+	transition-delay: 750ms;
+
+	img {
+		transition-delay: 750ms;		
+	}
+}
+
+.tool-icon-3 {
+	transition-delay: 1500ms;
+
+	img {
+		transition-delay: 1500ms;		
+	}
+}
+
+.show-tool-icons .tool-three-icon-single-view {
+	opacity: 1;
+
+	img {
+		transform: rotate(0deg);
+	}
+}

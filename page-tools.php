@@ -81,7 +81,7 @@ get_header(); ?>
 				<h2 class="subheading center">MindGuide&#8480; is an unbiased, consumer-generated research technique identifying...</h2>
 			</div>
 			<div class="row tool-three-icon-view">
-				<div class="tool-three-icon-single-view col-4 center">
+				<div class="tool-three-icon-single-view tool-icon-1 col-4 center">
 					<img 
 						src="<?php bloginfo('template_directory'); ?>/img/Tools_Mindguide_Elements_icon.svg"
 						onerror="this.src='<?php bloginfo('template_directory'); ?>/img/Tools_Mindguide_Elements_icon.png'"
@@ -93,7 +93,7 @@ get_header(); ?>
 						Identifies cognitive, social, environmental and economic influencers
 					</p>
 				</div>
-				<div class="tool-three-icon-single-view col-4 center">
+				<div class="tool-three-icon-single-view tool-icon-2 col-4 center">
 					<img 
 						src="<?php bloginfo('template_directory'); ?>/img/Tools_Mindguide_Map_icon.svg"
 						onerror="this.src='<?php bloginfo('template_directory'); ?>/img/Tools_Mindguide_Map_icon.png'"
@@ -105,7 +105,7 @@ get_header(); ?>
 						Provides a clear mental map as to why and how decisions are made
 					</p>
 				</div>
-				<div class="tool-three-icon-single-view col-4 center">
+				<div class="tool-three-icon-single-view tool-icon-3 col-4 center">
 					<img 
 						src="<?php bloginfo('template_directory'); ?>/img/Tools_Mindguide_Audience_icon.svg"
 						onerror="this.src='<?php bloginfo('template_directory'); ?>/img/Tools_Mindguide_Audience_icon.png'"
