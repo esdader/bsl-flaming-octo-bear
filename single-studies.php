@@ -30,13 +30,6 @@ get_header(); ?>
 						<?php the_title(); ?>
 					</h1>
 					<div class="study-close-social-con">
-						<button class="close-study close-btn">
-							<img 
-								src="<?php bloginfo('template_directory'); ?>/img/close_button.svg"
-								onerror="this.src='<?php bloginfo('template_directory'); ?>/img/close_button.png'"
-
-								alt="Close">
-						</button>
 						<?php
 
 							$earl = get_permalink();
@@ -63,6 +56,13 @@ get_header(); ?>
 					<div class="study-button-block col-6 offset-1">
 						<button class="download">Download</button>
 						<button class="watch-webinar">Watch Webinar</button>
+						<button class="close-study close-btn">
+							<img 
+								src="<?php bloginfo('template_directory'); ?>/img/close_button.svg"
+								onerror="this.src='<?php bloginfo('template_directory'); ?>/img/close_button.png'"
+
+								alt="Close">
+						</button>
 					</div>	
 				</div>
 				

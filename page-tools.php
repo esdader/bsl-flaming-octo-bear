@@ -151,7 +151,7 @@ get_header(); ?>
 			</div>
 		</div>
 	</div>
-	<div class="l-outer l-tool-callout-panel-con has-down-arrow swatch-gray">
+	<div class="l-outer l-tool-callout-panel-con has-down-arrow">
 		<div class="l-inner">
 			<div class="row col-10 offset-1 callout-panel">
 				<h2 class="subheading">
@@ -166,7 +166,7 @@ get_header(); ?>
 			</div>
 		</div>
 	</div>
-	<div class="l-outer l-tool-multi-detail-panel">
+	<div class="l-outer l-tool-multi-detail-panel swatch-gray">
 		<div class="l-inner">
 			<div class="row">
 				<div class="col-5 offset-1">
@@ -184,6 +184,10 @@ get_header(); ?>
 						alt="Brandembrace Chart Graphic">
 				</div>
 			</div>
+		</div>
+	</div>
+	<div class="l-outer l-tool-multi-detail-panel">
+		<div class="l-inner">
 			<div class="row col-8 offset-2 center multi-detail-mid-section">
 				<p>Ultimately, <strong>BrandEmbrace&#8480;</strong> helps brands identify their customers’ true needs across all touch points, how those needs are satisfied and how brands need to continue to develop the relationship to create and maintain stronger brand loyalty.
 			</div>
