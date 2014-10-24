@@ -21,6 +21,13 @@
         isLogoBig           = true,
         $backToTopBtn       = $('.back-to-top'),
         $mindguideIcons     = $('.tool-three-icon-view'),
+        $brandEmbraceIndex  = $('.brandembrace-index-number'),
+        $brandEmbraceIndexCon = $('.brandembrace-index-col'),
+        $mindguideInfographicHolder = $('.mindguide-infographic-holder'),
+        theNumberText         = 3,
+        brandembracePosTrackerTimer,
+        brandembraceIndexPos,
+        brandembraceCounterTimer,
         $mindguideIconsPos,
         mindguideIconsTracker,
         currentPos,
@@ -64,7 +71,6 @@
             });
 
         } else {
-            console.log('not big aspectRatio');
             var marginLeft;
 
             sideCrop = (winH *  photoRatio - winW) / 2;
@@ -160,6 +166,18 @@
      * Animation events
      */
 
+    // helper functions
+    function getRandomInt(min, max) {
+        return Math.floor(Math.random() * (max - min)) + min;
+    }
+
+    function padNumberLoop(number, length) {
+        var my_string = '' + number;
+        while (my_string.length < length) {
+            my_string = '0' + my_string;
+        }
+        return my_string;
+    }
 
     // mindguide icons
     function checkMindguidePos () {
@@ -169,6 +187,46 @@
         if (winBottom > $mindguideIconsPos) {
             clearInterval(mindguideIconsTracker);
             $mindguideIcons.addClass('show-tool-icons');
+        }
+    }
+
+    // brandembrace index
+    function brandembraceCounter () {
+        var num = padNumberLoop(theNumberText, 2);
+        $brandEmbraceIndex.text(num);
+        
+        var num = getRandomInt(1, 4);
+        theNumberText += num;
+        if (theNumberText > 64) {
+          clearInterval(brandembraceCounterTimer);
+          $brandEmbraceIndex.text(64);
+        }
+    }
+
+    // mindguide dna infographic
+    $mindguideInfographicHolder.on('click', function () {
+        $(this).toggleClass('show-other-side');
+    });
+
+    $mindguideInfographicHolder.on('mouseenter', function () {
+        $(this).addClass('show-other-side');
+    });
+
+    $mindguideInfographicHolder.on('mouseleave', function () {
+        $(this).removeClass('show-other-side');
+    });
+
+
+
+    // tracking brandebrace position
+
+    function brandembraceIndexPosTracker () {
+        var windowTop = $('body').scrollTop() || $('html').scrollTop(),
+            winBottom = $(window).height() + windowTop - 125;
+
+        if (winBottom > brandembraceIndexPos) {
+            brandembraceCounterTimer = window.setInterval(brandembraceCounter, 100);
+            clearInterval(brandembracePosTrackerTimer);
         }
     }
 
@@ -313,6 +371,11 @@
         if ($mindguideIcons.length > 0) {
             $mindguideIconsPos = $mindguideIcons.offset().top;
             mindguideIconsTracker = window.setInterval(checkMindguidePos, 100);    
+        }
+
+        if ($brandEmbraceIndex.length > 0) {
+            brandembraceIndexPos = $brandEmbraceIndexCon.offset().top;
+            brandembracePosTrackerTimer = window.setInterval(brandembraceIndexPosTracker, 100);
         }
         
         // check for positioning things
