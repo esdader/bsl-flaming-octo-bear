@@ -41,7 +41,7 @@
 	position: fixed;
 	right: 40px;
 	bottom: 60px;
-	display: block;
+	display: none;
 	width: 28px;
 	height: 32px;
 	background: url(../img/backtotop_btn.svg) no-repeat left top;
@@ -49,4 +49,8 @@
 	.no-svg & {
 		background-image: url(../img/backtotop_btn.png);
 	}
+}
+
+.show-back-to-top.back-to-top {
+	display: block;
 }

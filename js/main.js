@@ -19,6 +19,7 @@
         $loadStudyBtn       = $('.js-load-study'),
         $studyCon           = $('.l-study-con'),
         isLogoBig           = true,
+        isBackToTopShowing  = false,
         $backToTopBtn       = $('.back-to-top'),
         $mindguideIcons     = $('.tool-three-icon-view'),
         $brandEmbraceIndex  = $('.brandembrace-index-number'),
@@ -360,6 +361,20 @@
                 isLogoBig = true;
             }
         }
+
+        if ( offy > $(window).height() ) {
+            if (isBackToTopShowing === false) {
+                $backToTopBtn.addClass('show-back-to-top');
+                isBackToTopShowing = true;
+            }
+        } else {
+            if (isBackToTopShowing === true) {
+                $backToTopBtn.removeClass('show-back-to-top');
+                isBackToTopShowing = false;
+            }
+        }
+
+
     }
 
 

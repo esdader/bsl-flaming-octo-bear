@@ -110,6 +110,8 @@ $columns: 12;
  	width: 100%;
  	padding-bottom: 140 / 16 * 1em;
  	background-color: $gray;
+ 	position: relative;
+ 	z-index: 90;
 }
 
 .l-footer {
@@ -129,6 +131,7 @@ $columns: 12;
  	width: 100%;
  	line-height: 44 / 16 * 1em;
  	background-color: $gray;
+ 	z-index: 80;
 }
 
 .l-short-footer {

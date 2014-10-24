@@ -34,6 +34,8 @@
 	}
 }
 
+
+
 .main-nav {
 	li {
 		width: 1 / 5 * 100%;
@@ -76,6 +78,16 @@
                 transition: color 300ms ease-out;
 	}
 
+}
+
+.blog .main-nav a,
+.page-id-9 .main-nav a {
+	color: #424242;
+}
+
+.page-id-9 .show-short-view .main-nav a,
+.blog .show-short-view .main-nav a {
+	color: #fff;
 }
 
 .gen-social-media-links {
