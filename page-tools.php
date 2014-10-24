@@ -128,11 +128,18 @@ get_header(); ?>
 					It provides a single solution with multiple applications to create a competitive advantage for our clients.
 				</h2>
 			</div>
-			<div class="row col-10 no-gutters offset-1">
-				<img 
-					src="<?php bloginfo('template_directory'); ?>/img/Tools_mindguide_icons.svg"
-					onerror="this.src='<?php bloginfo('template_directory'); ?>/img/Tools_mindguide_icons.png'"
-					alt="MindGuide infographic">
+			<div class="row col-10 no-gutters offset-1 mindguide-infographic-holder">
+				<div class="mindguide-infographic-outside-con">
+				    <div class="mindguide-infographic-inner-con">
+				    	<div class="mindguide-infographic-panel smart-data-icon">
+					        <img src="<?php bloginfo('template_directory');?>/img/smart_data_icon.svg" onerror="this.src='<?php bloginfo('template_directory');?>/img/smart_data_icon.png'" alt="">
+					        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque repellat, tenetur ex iure obcaecati! Maxime culpa tempora eligendi, autem ipsam quasi!</p>
+					    </div>
+					    <div class="mindeguide-infographic-panel dna-icons-all">
+					    	<img src="<?php bloginfo('template_directory');?>/img/dna_icons_all.svg" onerror="this.src='<?php bloginfo('template_directory');?>/img/dna_icons_all.png'">
+					    </div> 
+				    </div>
+				</div>
 			</div>
 			
 		</div>

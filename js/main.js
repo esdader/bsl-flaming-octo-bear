@@ -23,6 +23,7 @@
         $mindguideIcons     = $('.tool-three-icon-view'),
         $brandEmbraceIndex  = $('.brandembrace-index-number'),
         $brandEmbraceIndexCon = $('.brandembrace-index-col'),
+        $mindguideInfographicHolder = $('.mindguide-infographic-holder'),
         theNumberText         = 3,
         brandembracePosTrackerTimer,
         brandembraceIndexPos,
@@ -201,6 +202,21 @@
           $brandEmbraceIndex.text(64);
         }
     }
+
+    // mindguide dna infographic
+    $mindguideInfographicHolder.on('click', function () {
+        $(this).toggleClass('show-other-side');
+    });
+
+    $mindguideInfographicHolder.on('mouseenter', function () {
+        $(this).addClass('show-other-side');
+    });
+
+    $mindguideInfographicHolder.on('mouseleave', function () {
+        $(this).removeClass('show-other-side');
+    });
+
+
 
     // tracking brandebrace position
 

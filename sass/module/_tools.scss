@@ -243,3 +243,200 @@
 	font-weight: $bold;
 	color: #07b3c5;
 }
+
+// smartguide dna icons animation
+
+// <div class="logo-outside-con invisible">
+//     <div class="logo-inner-con">
+//         <img src="img/circle.svg" onerror="this.src='img/circle.png'" alt="" class="circle">
+//         <img class="small-logo" src="img/logo_w_background.svg" onerror="this.src='img/logo_w_background.png'">    
+//     </div>
+// </div>
+
+.mindguide-infographic-holder {
+	position: relative;
+	height: 340px;
+	cursor: pointer;
+}
+
+.mindguide-infographic-outside-con {
+	position: absolute;
+	width: 689px;
+	height: 340px;
+	z-index: 50;
+	left: 50%;
+	margin-left: -(689/2)* 1px;
+	-webkit-perspective: 1000;
+	        perspective: 1000;
+	-webkit-transform: translate3d(0, 0, 0);
+	        transform: translate3d(0, 0, 0);
+	-webkit-backface-visibility: hidden;
+	        backface-visibility: hidden;
+	transform-style: preserve-3d;
+	-webkit-transform-style: preserve-3d;
+	-webkit-transition: all 500ms linear;
+            transition: all 500ms linear; 
+}
+
+.mindguide-infographic-inner-con {
+	position: relative;
+	width: 100%;
+	height: 340px;
+	-webkit-transform-style: preserve-3d;
+	        transform-style: preserve-3d;
+	-webkit-transform: translate3d(0, 0, 0);
+	        transform: translate3d(0, 0, 0);
+	-webkit-perspective: 1000;
+	        perspective: 1000;
+	-webkit-backface-visibility: hidden;
+	        backface-visibility: hidden;
+	transform-style: preserve-3d;
+	-webkit-transform-style: preserve-3d;
+	-webkit-transition: all 500ms linear;
+            transition: all 500ms linear; 
+}
+
+.mindguide-infographic-panel {
+	position: absolute;
+	width: 100%;
+	height: 340px;
+	left: 0;
+	top: 0;
+	-webkit-backface-visibility: hidden;
+	        backface-visibility: hidden;
+	-webkit-transform: translate3d(0, 0, 0);
+	        transform: translate3d(0, 0, 0);
+	-webkit-perspective: 1000;
+	        perspective: 1000;
+	text-align: center;
+	transform-style: preserve-3d;
+	-webkit-transform-style: preserve-3d;
+	-webkit-transition: all 500ms linear;
+            transition: all 500ms linear; 
+}
+
+.smart-data-icon {
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 5;
+	display: block;
+	-webkit-transform: rotateY(0deg);
+	        transform: rotateY(0deg);
+	        -webkit-backface-visibility: hidden;
+	        backface-visibility: hidden;
+	        transform-style: preserve-3d;
+	-webkit-transform-style: preserve-3d;
+	-webkit-transition: all 500ms linear;
+            transition: all 500ms linear;
+
+    p {
+    	padding: .5em 25%;
+    	text-align: center;
+    }
+}
+
+.dna-icons-all {
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 20;
+	display: block;
+	-webkit-transform: rotateY(-180deg);
+	        transform: rotateY(-180deg);
+	         -webkit-backface-visibility: hidden;
+	        backface-visibility: hidden;
+	        transform-style: preserve-3d;
+	-webkit-transform-style: preserve-3d;
+	        -webkit-transition: all 500ms linear;
+            transition: all 500ms linear;
+}
+
+.show-other-side {
+	.smart-data-icon {
+		-webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+	}
+
+	.dna-icons-all {
+		-webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+	}
+}
+
+.long-animation {
+    /*transition-property*/
+    -webkit-transition-property:width left top height;
+       -moz-transition-property:width left top height;
+         -o-transition-property:width left top height;
+            transition-property:width left top height;
+    /*transition-duration*/
+    -webkit-transition-duration:1s;
+       -moz-transition-duration:1s;
+         -o-transition-duration:1s;
+            transition-duration:1s;
+}
+
+
+.big-logo {
+    position: absolute;
+    left: 50%;
+    z-index: 10;
+}
+
+.short-animation {
+    -webkit-transition: all 500ms linear;
+            transition: all 500ms linear;  
+}
+
+/* entire container, keeps perspective */
+.logo-outside-con {
+      
+}
+
+.no-csstransitions .logo-outside-con {
+    left: 50%;
+    top: 50%;
+    margin-left: -221px;
+    margin-top: -221px;
+}
+
+.logo-inner-con {
+    
+}
+/*.show-otherside .logo-inner-con {
+    -webkit-transform: rotateX(-180deg);
+            transform: rotateX(-180deg);
+}*/
+
+.circle,
+.small-logo {
+    
+}
+
+.circle {
+    
+}
+
+.no-csstransitions .circle {
+    display: none;
+}
+
+.small-logo {
+    
+}
+
+.no-csstransitions .small-logo {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+    z-index: 20;
+    display: none;
+}
+
+.show-otherside .small-logo {
+    
+}
+
+.show-otherside .circle {
+    
+}
