@@ -167,7 +167,15 @@
 
     // helper functions
     function getRandomInt(min, max) {
-      return Math.floor(Math.random() * (max - min)) + min;
+        return Math.floor(Math.random() * (max - min)) + min;
+    }
+
+    function padNumberLoop(number, length) {
+        var my_string = '' + number;
+        while (my_string.length < length) {
+            my_string = '0' + my_string;
+        }
+        return my_string;
     }
 
     // mindguide icons
@@ -183,7 +191,8 @@
 
     // brandembrace index
     function brandembraceCounter () {
-        $brandEmbraceIndex.text(theNumberText);
+        var num = padNumberLoop(theNumberText, 2);
+        $brandEmbraceIndex.text(num);
         
         var num = getRandomInt(1, 4);
         theNumberText += num;
@@ -197,7 +206,7 @@
 
     function brandembraceIndexPosTracker () {
         var windowTop = $('body').scrollTop() || $('html').scrollTop(),
-            winBottom = $(window).height() + windowTop - 50;
+            winBottom = $(window).height() + windowTop - 125;
 
         if (winBottom > brandembraceIndexPos) {
             brandembraceCounterTimer = window.setInterval(brandembraceCounter, 100);

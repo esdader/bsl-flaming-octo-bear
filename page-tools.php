@@ -183,7 +183,7 @@ get_header(); ?>
 						onerror="this.src='<?php bloginfo('template_directory'); ?>/img/Tools_chartGraphic.png'"
 						alt="Brandembrace Chart Graphic">
 						<div class="brandembrace-index-number-con">
-							<span class="brandembrace-index-number">3</span>
+							<span class="brandembrace-index-number">00</span>
 						</div>
 				</div>
 			</div>
