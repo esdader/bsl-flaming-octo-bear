@@ -133,7 +133,7 @@ get_header(); ?>
 				    <div class="mindguide-infographic-inner-con">
 				    	<div class="mindguide-infographic-panel smart-data-icon">
 					        <img src="<?php bloginfo('template_directory');?>/img/smart_data_icon.svg" onerror="this.src='<?php bloginfo('template_directory');?>/img/smart_data_icon.png'" alt="">
-					        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque repellat, tenetur ex iure obcaecati! Maxime culpa tempora eligendi, autem ipsam quasi!</p>
+					        <p>An all inclusive research solution combining deep data and big data providing a clear, holistic and multi-dimentional view of purchase decision dynamics.</p>
 					    </div>
 					    <div class="mindeguide-infographic-panel dna-icons-all">
 					    	<img src="<?php bloginfo('template_directory');?>/img/dna_icons_all.svg" onerror="this.src='<?php bloginfo('template_directory');?>/img/dna_icons_all.png'">
