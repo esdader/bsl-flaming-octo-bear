@@ -21,7 +21,7 @@
 }
 
 .study-header {
-	margin-top: em(66);
+	margin-top: .25em;
 }
 
 .study-title {
@@ -113,4 +113,44 @@
 
 .l-study-con {
 	display: none;
+}
+
+// video modal
+.l-video-modal-con {
+	display: none;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	padding-top: 80px;
+	z-index: 999;
+	background: #ccc;
+	background: rgba(0,0,0, .8);
+}
+
+.video-modal {
+	position: relative;
+}
+
+.close-video-btn {
+	border: none;
+	background: none;
+	color: $gold;
+	position: absolute;
+	right: 20px;
+	top: 10px;
+	z-index: 9999;
+}
+
+.download-tracker-form-con {
+	display: none;
+}
+
+.form-msg {
+	margin-bottom: 1em;
+}
+
+.form-error-msg {
+	margin-bottom: .5em;
 }

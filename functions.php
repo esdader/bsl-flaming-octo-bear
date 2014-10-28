@@ -19,7 +19,7 @@ function starter_theme_scripts() {
 		'main', 
 		get_template_directory_uri() . '/css/main.css',
 		array(),
-		'0.1.4'
+		'0.1.9'
 	);
 	
 	// modernizr
@@ -62,7 +62,7 @@ function starter_theme_scripts() {
 				'jquery',
 				'plugins'
 			),
-		'0.0.9',
+		'0.1.2',
 		true
 
 	);
@@ -84,6 +84,11 @@ function register_starter_theme_menus() {
 }
 add_action( 'init', 'register_starter_theme_menus' );
 
+/**
+ * Don't show admin bar
+ */
+
+show_admin_bar(false);
 
 /**
  * Add featured images support

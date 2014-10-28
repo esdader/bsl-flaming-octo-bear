@@ -17,11 +17,14 @@ get_header(); ?>
 	</div>
 	<article id="current-study" class="l-outer l-single-view-study-con">
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-			<div class="l-inner is-expanded">
-				<div class="study-hero-con">
+			<div class="l-inner">
+				<div class="study-hero-con col-10 offset-1">
 					<?php if ( has_post_thumbnail() ) : ?>
 						<?php the_post_thumbnail('full'); ?>
 					<?php endif; ?>
+					<button class="close-study close-btn">
+						[close]
+					</button>
 				</div>
 			</div>
 			<div class="l-inner study">
@@ -54,19 +57,32 @@ get_header(); ?>
 				</div>
 				<div class="row">
 					<div class="study-button-block col-6 offset-1">
-						<button class="download">Download</button>
-						<button class="watch-webinar">Watch Webinar</button>
-						<button class="close-study close-btn">
-							<img 
-								src="<?php bloginfo('template_directory'); ?>/img/close_button.svg"
-								onerror="this.src='<?php bloginfo('template_directory'); ?>/img/close_button.png'"
-
-								alt="Close">
-						</button>
+						<?php if ( !is_user_logged_in() ) : ?>
+							<button class="download js-open-registration-modal">Download</button>
+							<button class="watch-webinar js-open-registration-modal">Watch Webinar</button>
+						<?php else : ?>
+							<?php 
+								$file = get_field('downloadable_pdf');
+							?>
+							<a class="download is-link js-download-pdf" href="<?php echo $file['url']; ?>" target="_blank">Download</a>
+							<button class="watch-webinar js-open-video-modal">Watch Webinar</button>
+						<?php endif; ?>
 					</div>	
 				</div>
-				
 			</div>
+			<?php if ( !is_user_logged_in() ) : ?>
+			<div class="l-outer l-video-modal-con">
+				<div class="l-inner">
+					<div class="video-modal col-10 offset-1">
+						<button class="close-video-btn">
+							[close]
+						</button>
+						<?php the_field('webinar'); ?>
+					</div>
+				</div>
+			</div>
+			<?php endif; ?>
+			
 		<?php endwhile; ?>
 		<?php else: ?>
 		<?php endif; ?>

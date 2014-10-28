@@ -25,6 +25,12 @@
 	width: 168px;
 	padding-left: 0;
 	padding-right: 0;
+
+	&.is-link {
+		display: inline-block;
+		text-align: center;
+		text-decoration: none;
+	}
  }
 
  .close-btn {

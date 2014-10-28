@@ -1,0 +1,155 @@
+/**
+ * Login forms
+ */
+
+ // Custom Login/Register/Password Code @ http://digwp.com/2010/12/login-register-password-code/
+
+
+ 
+ /* tabbed list */
+ .tabs_login {
+ 	padding: 0; margin: 20px 0 0 0;
+ 	position: relative;
+ 	list-style: none;
+ 	font-size: 14px;
+ 	z-index: 1000;
+ 	float: left;
+ 	}
+ .tabs_login li {
+ 	line-height: 28px; /* = */ height: 28px;
+ 	padding: 0; margin: 0 5px 0 0;
+ 	position: relative;
+ 	background: $dark-blue;
+ 	overflow: hidden;
+ 	float: left;
+ 	}
+ .tabs_login li a {
+ 	text-decoration: none;
+ 	padding: 0 10px;
+ 	display: block;
+ 	outline: none;
+ 	color: #fff;
+ 	}
+ .tabs_login .active_login {
+ 	background: $dark-blue;
+ 	color: $gold;
+		
+		a {
+			color: $gold;
+		}
+
+ 	}
+ .tabs_login .active_login a { font-weight: $bold; }
+ .tab_container_login {
+ 	background: $dark-blue;
+ 	position: relative;
+ 	margin: 0 0 20px 0;
+ 	z-index: 999;
+ 	float: left;
+ 	width: 100%;
+ 	top: -1px;
+ 	color: $gold;
+ 	}
+ .tab_content_login {
+ 	padding: 0 60px 56px;
+ 	}
+ 	.tab_content_login ul {
+ 		padding: 0; margin: 0 0 0 15px;
+ 		}
+ 		.tab_content_login li { margin: 5px 0; }
+ /* global styles */
+ #login-register-password {}
+ 	#login-register-password h3 {
+ 		border: 0 none;
+ 		margin: 40px 0;
+ 		padding: 0;
+ 		font-size: 30px;
+ 		font-weight: $bold;
+ 		}
+ 	#login-register-password p {
+ 		margin: 0 0 15px 0;
+ 		padding: 0;
+ 		}
+ /* form elements */
+ .wp-user-form {}
+ .tab_content_login {
+ 	label {
+ 		width: 40%;
+ 		float: left;
+ 		color: #fff;
+ 	}
+ 	input[type=text],
+ 	input[type=password] {
+ 		width: 60%;
+ 		border: 2px solid $gold;
+ 		background: $dark-blue;
+ 		margin-bottom: .5em;
+ 	}
+
+ 	input[type=submit] {
+ 		border: 2px solid $gold;
+ 		background: $dark-blue;
+ 		color: #fff;
+ 		text-transform: uppercase;
+ 		padding: .5em 2em;
+ 	}
+
+ 	.login_fields {
+ 		padding-top: 1em;
+ 		text-align: center;
+ 	}
+ }
+ 	// .username, .password, .login_fields {
+ 	// 	margin: 7px 0 0 0;
+ 	// 	overflow: hidden;
+ 	// 	width: 100%;
+ 	// 	}
+ 		// .username label, .password label { float: left; clear: none; width: 25%; }
+ 		// .username input, .password input { 
+ 		// 	font: 14px/30px $font-family;
+ 		// 	float: left; clear: none; width: 200px; padding: 2px 3px; color: #777;
+ 		// 	}
+ .rememberme { overflow: hidden; width: 100%; margin-bottom: 7px; }
+ #rememberme { float: left; clear: none; margin: 4px 4px -4px 0; }
+ .user-submit { padding: 5px 10px; margin: 5px 0; }
+ .userinfo { float: left; clear: none; width: 75%; margin-bottom: 10px; }
+ 	.userinfo p { 
+ 		margin-left: 10px; 
+ 		}
+ .usericon { float: left; clear: none; width: 15%; margin: 0 0 10px 22px; }
+ 	.usericon img {
+ 		border: 1px solid #F4950E;
+ 		padding: 1px;
+ 		}
+
+ // Custom Login/Register/Password Code @ http://digwp.com/2010/12/login-register-password-code/
+
+ .l-registration-outer-con {
+ 	display: none;
+ 	position: fixed;
+ 	left: 0;
+ 	top: 0;
+ 	z-index: 2000;
+ 	width: 100%;
+ 	height: 100%;
+ 	padding-top: 80px;
+ 	background: #ccc;
+ 	background: rgba(0,0,0, .8);
+ }
+.reg-body {
+	max-height: 210px;
+	overflow-y: auto;
+}
+
+.close-reg-btn {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	background: none;
+	color: #fff;
+	border: none;
+
+	&:hover {
+		color: $gold;
+	}
+}

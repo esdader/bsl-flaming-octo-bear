@@ -70,7 +70,7 @@ get_header(); ?>
 		<div class="l-inner">
 			<div class="row col-10 offset-1 callout-panel shrink-it">
 				<h2 class="subheading alt-color">
-				By combining psychology, sociology and behavioral economics, MindGuide&#8480; allows consumers to tell us why they chose what they chose — creating an algorithm into the mind.
+				By combining psychology, sociology and behavioral economics, MINDGUIDE&#8480; allows consumers to tell us why they chose what they chose — creating an algorithm into the mind.
 				</h2>
 			</div>
 		</div>
@@ -78,7 +78,7 @@ get_header(); ?>
 	<div class="l-outer l-tool-three-icon-view-con has-down-arrow swatch-gray">
 		<div class="l-inner">
 			<div class="row col-8 offset-2 no-gutters">
-				<h2 class="subheading center">MindGuide&#8480; is an unbiased, consumer-generated research technique identifying...</h2>
+				<h2 class="subheading center">MINDGUIDE&#8480; is an unbiased, consumer-generated research technique identifying...</h2>
 			</div>
 			<div class="row tool-three-icon-view">
 				<div class="tool-three-icon-single-view tool-icon-1 col-4 center">
@@ -202,10 +202,14 @@ get_header(); ?>
 				<p>Ultimately, <strong>BrandEmbrace&#8480;</strong> helps brands identify their customers’ true needs across all touch points, how those needs are satisfied and how brands need to continue to develop the relationship to create and maintain stronger brand loyalty.
 			</div>
 			<div class="row col-8 offset-2 center multi-detail-bottom-section">
-				<img 
+				<!-- <img 
 						src="<?php bloginfo('template_directory'); ?>/img/Tools_brandembrace_icons.svg"
 						onerror="this.src='<?php bloginfo('template_directory'); ?>/img/Tools_brandembrace_icons.png'"
+						alt="Brandembrace incons"> -->
+				<img 
+						src="<?php bloginfo('template_directory'); ?>/img/Tools_brandembrace_icons.png"
 						alt="Brandembrace incons">
+
 			</div>
 		</div>
 	</div>

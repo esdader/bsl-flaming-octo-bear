@@ -40,6 +40,7 @@
         winW,
         i = 0;
 
+console.log($loadStudyBtn);
 
     function findAvailableSpace() {
         var headerH = $header.outerHeight(),
@@ -161,6 +162,13 @@
                 scrollTop: scrollPos
             }, 500);
 
+    }
+
+    function getParameterByName(name) {
+        name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+        var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+            results = regex.exec(location.search);
+        return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
     }
 
     /**
@@ -324,7 +332,6 @@
             earl = $this.attr('href'),
             openStudies = $('.study-is-open'),
             openStudy = false;
-
         e.preventDefault();
 
         if ($this.hasClass('study-is-open')) {
@@ -345,6 +352,61 @@
         $('html, body').animate({
             scrollTop: 0
         }, 300);
+    });
+
+    $studyCon.on('click', '.js-open-registration-modal', function () {
+        $('.l-registration-outer-con').fadeIn();
+    });
+
+    $('.close-reg-btn').on('click', function () {
+        $('.l-registration-outer-con').fadeOut();
+    });
+
+    $studyCon.on('click', '.js-open-video-modal', function () {
+        $('.l-video-modal-con').fadeIn();
+
+        var theForm  = $('#wpcf7-f88-o1'),
+            theTitle = $('.study-title').text();
+
+
+        theForm.find('.download-name').val(bslDltracker.name);
+        theForm.find('.download-email').val(bslDltracker.email);
+        theForm.find('.download-phone-number').val(bslDltracker.phoneNumber);
+        theForm.find('download-title').val(bslDltracker.title);
+        theForm.find('.download-company').val(bslDltracker.company);
+        theForm.find('.download-email').val(bslDltracker.email);
+        theForm.find('.download-date').val(bslDltracker.date);
+        theForm.find('.download-study-name').val(theTitle);
+        
+        theForm.find('.download-download-type').val('webinar');
+
+        theForm.find('.download-tracker-submit').trigger('click');
+    });
+
+    $studyCon.on('click', '.close-video-btn', function () {
+        $('.l-video-modal-con').fadeOut();
+    });
+
+    $studyCon.on('click', '.js-download-pdf', function (e) {
+
+
+        var theForm  = $('#wpcf7-f88-o1'),
+            theTitle = $('.study-title').text();
+
+
+        theForm.find('.download-name').val(bslDltracker.name);
+        theForm.find('.download-email').val(bslDltracker.email);
+        theForm.find('.download-phone-number').val(bslDltracker.phoneNumber);
+        theForm.find('download-title').val(bslDltracker.title);
+        theForm.find('.download-company').val(bslDltracker.company);
+        theForm.find('.download-email').val(bslDltracker.email);
+        theForm.find('.download-date').val(bslDltracker.date);
+        theForm.find('.download-study-name').val(theTitle);
+        theForm.find('.download-download-type').val('PDF');
+
+        theForm.find('.download-tracker-submit').trigger('click');
+
+
     });
 
     function checkBodyPos() {
@@ -376,11 +438,32 @@
 
 
     }
+        // login forms
+        
+        $(".tab_content_login").hide();
+        $("ul.tabs_login li:first").addClass("active_login").show();
+        $(".tab_content_login:first").show();
+        $("ul.tabs_login li").on('click', function(e) {
+            $("ul.tabs_login li").removeClass("active_login");
+            $(this).addClass("active_login");
+            $(".tab_content_login").hide();
+            var activeTab = $(this).find('a').attr('href');
+            $(activeTab).show();
+            e.preventDefault();
+        });
 
 
     // kick things off
     function init() {
         var scrollTracker = window.setInterval(checkBodyPos, 100);
+
+        if ($studyCon.length > 0 ) {
+            var prodId = getParameterByName('show');
+
+            if (prodId === 'reg') {
+                $('.l-registration-outer-con').fadeIn();
+            }
+        }
         
         // track mindguide icons if on page
         if ($mindguideIcons.length > 0) {

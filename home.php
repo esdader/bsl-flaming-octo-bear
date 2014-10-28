@@ -45,6 +45,9 @@ get_header(); ?>
 					<?php if ( has_post_thumbnail() ) : ?>
 						<div class="l-blog-single-hero">
 							<?php the_post_thumbnail('blog-full-width'); ?>
+							<button class="news-close-btn">
+								[close]
+							</button>
 						</div>
 					<?php endif; ?>
 					<div class="row">
@@ -61,13 +64,6 @@ get_header(); ?>
 
 						?>
 						<div class="l-blog-single-view-social-links">
-							<button class="news-close-btn">
-								<img 
-									src="<?php bloginfo('template_directory'); ?>/img/close_button.svg"
-									onerror="this.src='<?php bloginfo('template_directory'); ?>/img/close_button.png'"
-
-									alt="Close">
-							</button>
 							<ul class="l-horizontal-list study-social-media-links gen-social-media-links">
 								<li><a class="study-social-link study-facebook" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $encoded_earl; ?>">Share on Facebook</a></li>
 								<li><a class="study-social-link study-twitter" target="_blank" href="https://twitter.com/home?status=<?php echo $encoded_earl; ?>">Share on Twitter</a></li>
