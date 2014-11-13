@@ -3,7 +3,9 @@
  */
 
 .l-tools-intro-outer {
+	display: relative;
 	min-height: em(600);
+	width: 100%;
 	background: url(../img/3_window_talking.jpg) no-repeat center center;
 	background-size: cover;
 }

@@ -19,8 +19,12 @@
 }
 
 .l-blog-landing-con {
-	padding-top: em(100);
+	padding-top: 1em;
 	background-color: #fff;	
+}
+
+.l-blog-landing-con:first-child {
+	padding-top: em(100);
 }
 
 .l-blog-landing-image {
@@ -31,7 +35,7 @@
 
 .l-blog-landing-entry {
 	@extend .clearfix;
-	padding-top: em(30);
+	padding-top: 0;
 	padding-bottom: em(30);
 }
 

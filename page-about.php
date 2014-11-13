@@ -26,7 +26,7 @@ get_header(); ?>
 			</div>
 			<div class="col-5 offset-1 about-reimagine-content">
 				<p>
-					We created the Lab to help our clients understand the full picture of how people make decisions in their daily lives. We know that current market research techniques can tell you the who, what when and where, but not truly why people buy or will buy your brand.
+					We created the Lab to help our clients understand the full picture of how people make decisions in their daily lives. We know that current market research techniques can tell you the who, what, when and where, but not truly why people buy or will buy your brand.
 				</p>
 				<p>
 					That’s why we set out to rethink and redesign the entire research process creating research tools that help our clients understand how people really think. 
