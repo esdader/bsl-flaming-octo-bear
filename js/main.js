@@ -30,6 +30,7 @@
         $brandEmbraceIndexCon = $('.brandembrace-index-col'),
         $mindguideInfographicHolder = $('.mindguide-infographic-holder'),
         theNumberText         = 3,
+        hasVidElement         = true,
         brandembracePosTrackerTimer,
         brandembraceIndexPos,
         brandembraceCounterTimer,
@@ -53,13 +54,13 @@
 
         winH = $window.height();
         winW = $window.width();
-
-        if (winW > 800) {
-            availableHeight = winH;
-        } else {
-            availableHeight = winH - headerH;
-            $videoCon.css('top', headerH + 'px');
-        }
+        availableHeight = winH;
+        // if (winW > 800) {
+        //     availableHeight = winH;
+        // } else {
+        //     availableHeight = winH - headerH;
+        //     $videoCon.css('top', headerH + 'px');
+        // }
 
         aspectRatio = winW / availableHeight;
 
@@ -85,6 +86,20 @@
     }
 
     function scaleLayout() {
+
+        var vid = document.getElementById('js-hompage-video');
+        if (hasVidElement) {
+            if (winW < 800) {
+                var img = $(vid).find('img');
+                img.insertBefore(vid);
+                $(vid).remove();
+                $el = img;
+                hasVidElement = false;
+            } else {
+                vid.play();    
+            }
+        }
+
         if (aspectRatio > photoRatio) {
             var curHeight = photoRatio * availableHeight,
                 marginTop = (availableHeight - curHeight) / 2;
@@ -109,6 +124,10 @@
             });
 
         }
+
+
+
+        
     }
 
     // close the study

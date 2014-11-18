@@ -3,7 +3,7 @@
 <div class="l-container">
 	<div class="l-home-section">
 		<div class="video-container">
-			<video autoplay loop poster="<?php bloginfo('template_directory'); ?>/img/BSL_HighRes_960.jpg">
+			<video id="js-hompage-video" loop poster="<?php bloginfo('template_directory'); ?>/img/BSL_HighRes_960.jpg">
 					<source src="<?php echo bloginfo('template_directory'); ?>/videos/bg.mp4" type="video/mp4">
 						<img src="<?php bloginfo('template_directory'); ?>/img/home_bg.jpg" alt="">
 			</video>

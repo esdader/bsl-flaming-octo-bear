@@ -15,7 +15,7 @@
 <div class="l-small-view-nav">
   <header class="l-small-view-nav-header clearfix">
   	<button class="close-nav-btn js-close-nav-btn">
-  		<img src="<?php bloginfo('template_directory'); ?>/img/x.svg" onerror="this.src='<?php bloginfo('template_directory'); ?>/img/x.png'" alt="Open menu">
+  		<img src="<?php bloginfo('template_directory'); ?>/img/xs.svg" onerror="this.src='<?php bloginfo('template_directory'); ?>/img/xs.png'" alt="Open menu">
   	</button>
   </header>
   <nav class="small-view-nav">

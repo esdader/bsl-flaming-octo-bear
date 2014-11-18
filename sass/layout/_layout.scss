@@ -114,6 +114,7 @@ $shift-animation: 300ms;
  	@media (max-width: $single-col) {
  		background-color: $gray;
  		background-color: rgba(66, 66, 66, .8);
+ 		height: 53px;
  	}
 
  	.nav-shift & {
@@ -273,9 +274,13 @@ $shift-animation: 300ms;
 }
 
 .l-small-view-nav-header {
-	border-top: 3px solid $gold;
 	padding: .25em 0;
 	background: $gray;
+	height: 53px;
+
+	button {
+		padding-top: 10px;
+	}
 }
 
 

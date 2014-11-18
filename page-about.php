@@ -115,7 +115,7 @@ get_header(); ?>
 	</div>
 	<div class="l-outer l-about-map">
 		<div class="map">
-			<iframe width='100%' height='646px' frameBorder='0' src='https://a.tiles.mapbox.com/v4/esdader.jmkp6hhd/attribution,zoompan.html?access_token=pk.eyJ1IjoiZXNkYWRlciIsImEiOiJtV1g2cnZJIn0.46vfmMQOHMte9Gqs5w8bFQ'></iframe>
+			<iframe width='100%' height='646px' frameBorder='0' src='https://a.tiles.mapbox.com/v4/esdader.jmkp6hhd/attribution.html?access_token=pk.eyJ1IjoiZXNkYWRlciIsImEiOiJtV1g2cnZJIn0.46vfmMQOHMte9Gqs5w8bFQ'></iframe>
 		</div>
 		<div class="l-inner l-about-map-inner">
 			<div class="row col-6 offset-1">

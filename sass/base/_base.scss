@@ -26,6 +26,8 @@ $footer-single-col: 810px;
 
 $shorten: 550px;
 
+$reduce-fonts: 400px;
+
 
 /**
  * functions
@@ -120,6 +122,10 @@ strong {
 .subheading {
 	font-size: em(30);
 	color: $dark-blue;
+
+	@media (max-width: $reduce-fonts) {
+		font-size: em(28);	
+	}
 
 	&.alt-color {
 		color: $teal;

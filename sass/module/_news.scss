@@ -87,6 +87,7 @@
 	@media (max-width: 850px) {
 		width: 100%;
 		float: none;
+		padding-top: .5em;
 	}
 }
 
@@ -139,6 +140,10 @@
 
 	&:hover {
 		color: $gold;
+	}
+
+	@media (max-width: 850px) {
+		font-size: 14px;
 	}
 }
 

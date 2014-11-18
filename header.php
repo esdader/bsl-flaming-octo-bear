@@ -66,7 +66,7 @@
         </ul>
       </div>
       <button class="menu-toggle js-menu-toggle">
-        <img src="<?php bloginfo('template_directory'); ?>/img/hamburger.svg" onerror="this.src='<?php bloginfo('template_directory'); ?>/img/hamburger.png'" alt="Open menu">
+        <img src="<?php bloginfo('template_directory'); ?>/img/hamburger_s.svg" onerror="this.src='<?php bloginfo('template_directory'); ?>/img/hamburger_s.png'" alt="Open menu">
       </button>
     </div>
   </div>
