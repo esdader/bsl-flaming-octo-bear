@@ -3,11 +3,16 @@
  */
 
 .l-tools-intro-outer {
-	display: relative;
+	position: relative;
 	min-height: em(600);
 	width: 100%;
 	background: url(../img/3_window_talking.jpg) no-repeat center center;
 	background-size: cover;
+
+	@media (max-width: $shorten) {
+		min-height: inherit;
+		padding-bottom: 6em;
+	}
 }
 
 .l-tools-intro-heading {
@@ -16,6 +21,10 @@
 		font-size: em(36);
 		text-align: center;
 		color: #fff;
+
+		@media (max-width: $shorten) {
+			padding-top: em(140, 36);
+		}
 	}
 }
 
@@ -49,6 +58,10 @@
 	padding: em(100, 14) 1em 10em;
 	text-align: center;
 
+	@media (max-width: $shorten) {
+		padding: em(40, 14) 1em em(40, 14);
+	}
+
 	p,
 	li,
 	blockquote {
@@ -64,6 +77,12 @@
 	padding-top: em(174);
 	padding-bottom: em(180);
 
+	@media (max-width: $shorten) {
+		padding-top: em(100);
+		padding-bottom: em(100);
+
+	}
+
 	.section-heading {
 		color: $dark-blue;
 		font-size: em(30);
@@ -75,9 +94,17 @@
 .tools-logos {
 
 	li {
-		width: 300px;
+		width: per(300, 960);
 		margin: em(63) per(90) 0;
 		background: #e1e1e1;
+
+		@media (max-width: 700px) {
+			width: 100%;
+			background: none;
+			text-align: center;
+			float: none;
+			margin-left: 0;
+		}
 
 		img {
 			max-width: 100%;
@@ -89,6 +116,13 @@
 			display: block;
 			text-align: center;
 			width: 100%;
+
+			@media (max-width: 700px) {
+				max-width: 300px;
+				background: #e1e1e1;
+				margin-right: 0;
+				display: inline-block;
+			}
 
 		}
 	}
@@ -113,6 +147,16 @@
 	padding-top: em(140);
 	padding-bottom: em(180);
 	text-align: center;
+
+	@media (max-width: $shorten) {
+		padding-top: em(80);
+		padding-bottom: em(90);
+	}
+
+	img {
+		max-width: 100%;
+		height: auto;
+	}
 }
 
 .tool-intro-main-heading {
@@ -123,6 +167,11 @@
 .l-tool-callout-panel-con {
 	padding-top: em(140);
 	padding-bottom: em(145);
+
+	@media (max-width: $shorten) {
+		padding-top: em(60);
+		padding-bottom: em(60);
+	}
 }
 
 .callout-panel {
@@ -138,6 +187,12 @@
 .l-tool-three-icon-view-con {
 	padding-top: em(60);
 	padding-bottom: em(90);
+}
+
+.tool-three-icon-single-view {
+	@media (max-width: $single-col) {
+		padding-top: 1em;
+	}
 }
 
 .three-icon-view-title {
@@ -157,6 +212,11 @@
 .l-tool-large-infographic-con {
 	padding-top: em(120);
 	padding-bottom: em(100);
+
+	@media (max-width: $shorten) {
+		padding-top: em(80);
+		padding-bottom: em(90);
+	}
 }
 
 .tool-large-infographic-con .shrink-it .subheading {
@@ -166,6 +226,11 @@
 .l-tool-multi-detail-panel {
 	padding-top: em(100);
 	padding-bottom: em(140);
+
+	@media (max-width: $shorten) {
+		padding-top: em(80);
+		padding-bottom: em(90);
+	}
 
 	p,
 	li,
@@ -232,6 +297,10 @@
 
 .brandembrace-index-col {
 	position: relative;
+
+	@media (max-width: $single-col) {
+		margin-top: 2em;
+	}
 }
 
 .brandembrace-index-number-con {
@@ -278,6 +347,13 @@
 	-webkit-transform-style: preserve-3d;
 	-webkit-transition: all 500ms linear;
             transition: all 500ms linear; 
+
+    @media (max-width: 720px ) {
+    	width: 100%;
+    	position: relative;
+    	left: 0;
+    	margin-left: 0;
+    }
 }
 
 .mindguide-infographic-inner-con {
@@ -335,6 +411,13 @@
     p {
     	padding: .5em 25%;
     	text-align: center;
+
+    	@media (max-width: 720px) {
+    		width: 100%;
+    		max-width: 340px;
+    		padding: .5em 0;
+    		margin: 0 auto;
+    	}
     }
 }
 
@@ -352,6 +435,12 @@
 	-webkit-transform-style: preserve-3d;
 	        -webkit-transition: all 500ms linear;
             transition: all 500ms linear;
+
+    @media (max-width: 720px) {
+    	display: none;
+    	width: 100%;
+    	overflow: hidden;
+    }
 }
 
 .show-other-side {

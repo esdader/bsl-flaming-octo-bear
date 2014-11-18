@@ -54,7 +54,7 @@ get_header(); ?>
 <?php if ( !is_user_logged_in() ) : ?>
 <div class="l-outer l-registration-outer-con">
 	<div class="l-inner">
-		<div class="registration-inner-con col-6 no-guuters offset-3">
+		<div class="l-registration-inner-con">
 
 			<!-- Custom Login/Register/Password Code @ http://digwp.com/2010/12/login-register-password-code/ -->
 			<!-- Theme Template Code -->

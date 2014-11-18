@@ -5,6 +5,11 @@
 .l-studies-intro {
 	padding-top: em(198);
 	padding-bottom: em(56);
+
+	@media (max-width: $shorten) {
+		padding-top: em(100);
+		padding-bottom: em(30);
+	}
 }
 
 
@@ -29,12 +34,25 @@
 	width: 60%;
 	font-size: em(36);
 	color: $teal;
+	line-height: 1.1;
+
+	@media (max-width: $single-col) {
+		float: none;
+		width: 100%;
+		margin-bottom: 0;	
+	}
 }
 
 .study-close-social-con {
 	float: right;
 	position: relative;
 	padding-top: em(70);
+
+	@media (max-width: $single-col) {
+		float: none;
+		padding-top: 0;
+		margin: .25em 0 1em;
+	}
 
 	.close-btn {
 		position: absolute;
@@ -91,6 +109,10 @@
 
 .l-study {
 	padding-bottom: em(20);
+
+	@media (max-width: $single-col) {
+		margin-bottom: 2em;
+	}
 }
 
 .study-button-block {

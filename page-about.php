@@ -19,12 +19,12 @@ get_header(); ?>
 	</div>
 	<div class="l-about-reimagine">
 		<div class="l-inner">
-			<div class="col-6 offset-1">
+			<div class="col-8 offset-2">
 				<h2 class="about-reimagine-heading">
 					We live to decipher <em>why</em>.
 				</h2>
 			</div>
-			<div class="col-5 offset-1 about-reimagine-content">
+			<div class="col-8 offset-2 about-reimagine-content">
 				<p>
 					We created the Lab to help our clients understand the full picture of how people make decisions in their daily lives. We know that current market research techniques can tell you the who, what, when and where, but not truly why people buy or will buy your brand.
 				</p>
@@ -55,37 +55,53 @@ get_header(); ?>
 					?>
 					<?php if ( $tm->have_posts() ) : while ( $tm->have_posts() ) : $tm->the_post(); ?>
 						<li class="team-member">
-							<?php
-								$img = get_field('tm_main_image');
-								$roll_img = get_field('tm_main_image_rollover');
-							?>
-							<img 
-								class="team-member-image"
-								data-team-member-image="<?php echo $roll_img['url']; ?>"
-								src="<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>">
-							<div class="team-member-rolls">
-								<h3 class="team-member-name"><?php the_title(); ?></h3>
-								<h4 class="team-member-title">
-									<?php the_field('tm_title'); ?><br>
-									<?php the_field('tm_title_2'); ?>
+							<div class="team-member-con">
+								<?php
+									$img = get_field('tm_main_image');
+									$roll_img = get_field('tm_main_image_rollover');
+									$class_name = '.tmih-' . get_the_id();
+								?>
+								<style>
+									 
+									 <?php echo $class_name; ?> {
+										background-image: url(<?php echo $img['url']; ?>);
+									}
 
-								</h4>
-								<div class="team-member-quote">
-									<?php the_content(); ?>
+									.show-rolls <?php echo $class_name; ?>,
+									.team-member-con:hover <?php echo $class_name; ?> {
+										background-image: url(<?php echo $roll_img['url']; ?>);
+									}
+								</style>
+								<!-- <img 
+									class="team-member-image"
+									data-team-member-image="<?php echo $roll_img['url']; ?>"
+									src="<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>"> -->
+								<div class="team-member-rolls">
+									<h3 class="team-member-name"><?php the_title(); ?></h3>
+									<h4 class="team-member-title">
+										<?php the_field('tm_title'); ?><br>
+										<?php the_field('tm_title_2'); ?>
+
+									</h4>
+									<div class="team-member-quote">
+										<?php the_content(); ?>
+									</div>
+									<ul class="l-horizontal-list tm-social-media-links-con clearfix">
+										<?php if ( get_field('tm_twitter') ) : ?>
+										<li><a class="tm-social-links tm-twitter" href="<?php the_field('tm_twitter'); ?>"  target="_blank">Follow on Twitter</a></li>
+										<?php endif; ?>
+										<?php if ( get_field('tm_linkedin') ) : ?>
+										<li><a class="tm-social-links tm-linkedin" href="<?php the_field('tm_linkedin'); ?>" target="_blank">Follow on LinkedIn</a></li>
+										<?php endif; ?>
+										<?php if ( get_field('tm_email') ) : ?>
+										<li><a class="tm-social-links tm-email" href="<?php the_field('tm_email'); ?>" target="_blank">Email</a></li>
+										<?php endif; ?>
+									</ul>
 								</div>
-								<ul class="l-horizontal-list tm-social-media-links-con clearfix">
-									<?php if ( get_field('tm_twitter') ) : ?>
-									<li><a class="tm-social-links tm-twitter" href="<?php the_field('tm_twitter'); ?>"  target="_blank">Follow on Twitter</a></li>
-									<?php endif; ?>
-									<?php if ( get_field('tm_linkedin') ) : ?>
-									<li><a class="tm-social-links tm-linkedin" href="<?php the_field('tm_linkedin'); ?>" target="_blank">Follow on LinkedIn</a></li>
-									<?php endif; ?>
-									<?php if ( get_field('tm_email') ) : ?>
-									<li><a class="tm-social-links tm-email" href="<?php the_field('tm_email'); ?>" target="_blank">Email</a></li>
-									<?php endif; ?>
-								</ul>
-							</div>
-							
+								<div class="team-member-image-holder tmih-<?php echo the_id(); ?>">
+									
+								</div>
+							</div>							
 						</li>
 						
 					<?php endwhile; ?>

@@ -44,6 +44,11 @@ $columns: 12;
   	.col-#{$i} { 
   		@extend .col;
   		width: $i / 12 * 100%;
+
+  		@media (max-width: $single-col) {
+			width: 100%;
+			float: none;
+		}
   	}
   	.col-#{$i}.no-gutters { 
   		@extend %no-gutters;
@@ -57,15 +62,31 @@ $columns: 12;
   @for $x from 1 through $columns - 1 {
   	.offset-#{$x} {
   		margin-left: $x / 12 * 100%;
+
+  		@media (max-width: $single-col) {
+  			margin-left: 0;
+  		}
   	}
   }
 }
 
 @include col-offset-list;
 
+@mixin col-rt-offset-list {
+  @for $x from 1 through $columns - 1 {
+  	.rt-offset-#{$x} {
+  		margin-right: $x / 12 * 100%;
+  	}
+  }
+}
+
+@include col-rt-offset-list;
+
 .row {
 	clear: both;
 }
+
+$shift-animation: 300ms;
 
 /** 
  * Header
@@ -78,28 +99,57 @@ $columns: 12;
  	z-index: 999;
  	width: 100%;
  	line-height: 50 / 16 * 1em;
+	
 
-	-webkit-transition: background-color 300ms ease-out;
-       -moz-transition: background-color 300ms ease-out;
-         -o-transition: background-color 300ms ease-out;
-            transition: background-color 300ms ease-out;
+	-webkit-transition: background-color 300ms ease-out, left $shift-animation ease-out;
+       -moz-transition: background-color 300ms ease-out, left $shift-animation ease-out;
+         -o-transition: background-color 300ms ease-out, left $shift-animation ease-out;
+            transition: background-color 300ms ease-out, left $shift-animation ease-out;
 
  	&.show-short-view {
  		background-color: $gray;
+ 		background-color: rgba(66, 66, 66, .8);
  	}
+
+ 	@media (max-width: $single-col) {
+ 		background-color: $gray;
+ 		background-color: rgba(66, 66, 66, .8);
+ 	}
+
+ 	.nav-shift & {
+    	@media (max-width: $single-col) {
+			left: -80%;	
+		}
+    }
 }
 
 .l-header {
 	width: 100%;
 	max-width: $max-width * 1px;
-	min-width: $max-width-px;
 	margin: 0 auto;
 	padding: 0 $fluid-site-gutters;
 	line-height: 50 / 16 * 1em;
 }
 
-.l-header-social-icons.no-gutters {
-	padding-top: 1em;
+.l-main-logo-con {
+	@extend .col;
+	width: 158px;
+}
+
+.l-main-nav {
+	@extend .col;
+	width: 393px;
+
+	@media (max-width: $single-col) {
+		display: none;
+	}
+}
+
+.l-header-social-icons {
+	@extend .col;
+	float: right;
+	padding: 1em 0 0;
+	width: 80px;
 }
 
 /** 
@@ -112,13 +162,24 @@ $columns: 12;
  	background-color: $gray;
  	position: relative;
  	z-index: 90;
+ 	left: 0;
+
+ 	-webkit-transition: left $shift-animation ease-out;
+       -moz-transition: left $shift-animation ease-out;
+         -o-transition: left $shift-animation ease-out;
+            transition: left $shift-animation ease-out;
+
+    .nav-shift & {
+    	@media (max-width: $single-col) {
+			left: -80%;	
+		}
+    }
 }
 
 .l-footer {
 	@extend .clearfix;
 	width: 100%;
 	max-width: $max-width * 1px;
-	min-width: $max-width-px;
 	margin: 0 auto;
 	padding: (40 / 16 * 1em) $fluid-site-gutters 0;
 }
@@ -126,12 +187,34 @@ $columns: 12;
 // short footers
 .l-short-footer-con {
 	position: relative;
-	// left: 0;
+	left: 0;
 	// bottom: 0;
  	width: 100%;
  	line-height: 44 / 16 * 1em;
  	background-color: $gray;
  	z-index: 80;
+
+ 	@media (max-width: $footer-single-col) {
+ 		line-height: auto;
+ 		padding: 0 30px;
+ 	}
+
+	-webkit-transition: left $shift-animation ease-out;
+      -moz-transition: left $shift-animation ease-out;
+        -o-transition: left $shift-animation ease-out;
+           transition: left $shift-animation ease-out;
+
+    .nav-shift & {
+	   	@media (max-width: $single-col) {
+			left: -80%;	
+		}
+    }
+}
+
+.l-shift-con {
+	position: relative;
+	width: 100%;
+	overflow: hidden;
 }
 
 .l-short-footer {
@@ -147,8 +230,54 @@ $columns: 12;
  * main container
  */
  .l-container {
- 	// margin-top: 50 / 16 * 1em;
- }
+	position: relative;
+	left: 0;
+	-webkit-transition: left $shift-animation ease-out;
+       -moz-transition: left $shift-animation ease-out;
+         -o-transition: left $shift-animation ease-out;
+            transition: left $shift-animation ease-out;
+
+    .nav-shift & {
+    	@media (max-width: $single-col) {
+			left: -80%;	
+		}
+    }
+}
+
+.l-small-view-nav {
+	display: none;
+	position: fixed;
+	width: 80%;
+	height: 100%;
+	background: $gray;
+	left: 100%;
+	top: 0;
+	z-index: 99;
+	overflow-y: scroll;
+	
+	-webkit-transition: left $shift-animation ease-out;
+       -moz-transition: left $shift-animation ease-out;
+         -o-transition: left $shift-animation ease-out;
+            transition: left $shift-animation ease-out;
+	
+	@media (max-width: $single-col) {
+		display: block;
+	}
+
+    .nav-shift & {
+		@media (max-width: $single-col) {
+			left: 20%;
+		}
+    }
+
+}
+
+.l-small-view-nav-header {
+	border-top: 3px solid $gold;
+	padding: .25em 0;
+	background: $gray;
+}
+
 
 /**
  * helper con
@@ -161,7 +290,6 @@ $columns: 12;
 .l-inner {
 	width: 100%;
 	max-width: $max-width-px;
-	min-width: $max-width-px;
 	margin: 0 auto;
 	padding: 0 30px;
 	@extend .clearfix;
@@ -180,10 +308,15 @@ $columns: 12;
  */
 .l-about-why {
 	width: 100%;
-	min-height: em(525);
+	// min-height: em(525);
 	padding-top: em(220);
-	background: url(../img/about_why.jpg) no-repeat center center;
+	padding-bottom: 6em;
+	background: url(../img/about_why2.jpg) no-repeat center center;
 	background-size: cover;
+
+	@media (max-width: $shorten) {
+		padding-top: em(140);
+	}
 }
 
 .l-about-reimagine {
@@ -192,7 +325,12 @@ $columns: 12;
 	padding-top: em(126);
 	background: url(../img/about_reimagine2.jpg) no-repeat center center;
 	background-size: cover;
-
+	
+	@media (max-width: $shorten) {
+		padding-top: em(60);
+		min-height: inherit;
+		padding-bottom: em(60);
+	}
 }
 
 .l-about-map {
@@ -212,6 +350,10 @@ $columns: 12;
 .l-about-map-inner {
 	position: relative;
 	z-index: 80;
+	@media (max-width: 450px) {
+		padding-left: 0;
+		padding-right: 0;	
+	}
 }
 
 .l-about-bubble {
@@ -222,6 +364,12 @@ $columns: 12;
 	border-radius: 50%;
 	color: #fff;
 	text-align: center;
+
+	@media (max-width: 450px) {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
 
 	p {
 		font-size: em(13);

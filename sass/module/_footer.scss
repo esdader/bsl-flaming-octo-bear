@@ -34,6 +34,11 @@
 	vertical-align: top;
 	line-height: 44 / 16 * 1em;
 
+	@media (max-width: $footer-single-col) {
+		padding: .5em 0;
+		line-height: auto;
+	}
+
 
 	li {
 		font-weight: $bold;
@@ -41,10 +46,24 @@
 		line-height: 44 / 11 * 1em;
 		color: $white;
 
+		@media (max-width: $footer-single-col) {
+			line-height: 1.8;
+		}
+		
+		@media (max-width: $footer-single-col) {
+			width: 100%;
+			float: none;
+			text-align: center;
+		}
+
 		&:after {
 			content: ' | ';
 			color: $gold;
 			margin: 0 1em;
+
+			@media (max-width: $footer-single-col) {
+				content: none;
+			}
 		}
 
 		&:last-child:after {

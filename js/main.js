@@ -7,11 +7,15 @@
         photoWidth          = 960,
         photoRatio          = photoWidth / photoHeight,
         scrollToLinks       = $('.scroll-to-panel'),
+        $body               = $(document.body),
+        $menuToggle         = $('.js-menu-toggle'),
+        $menuCloseBtn       = $('.js-close-nav-btn'),
         $window             = $(window),
         $el                 = $('video'),
         $videoCon           = $('.video-container'),
         $homepageHeading    = $('.home-title'),
         $teamMember         = $('.team-member'),
+        $teamMembers        = $('.team-member-nav'),
         $blogImageBtns      = $('.l-blog-landing-entry').find('img'),
         $blogTitleBtns      = $('.blog-landing-title'),
         $blogCloseBtns      = $('.news-close-btn'),
@@ -40,22 +44,41 @@
         winW,
         i = 0;
 
-console.log($loadStudyBtn);
-
     function findAvailableSpace() {
         var headerH = $header.outerHeight(),
-            footerH = $footer.outerHeight();
+            footerH = $footer.outerHeight(),
+            homeCopyH = $('.l-home-copy').outerHeight(),
+            headerH   = $header.outerHeight(),
+            offset;
 
         winH = $window.height();
         winW = $window.width();
 
-        availableHeight = winH;
+        if (winW > 800) {
+            availableHeight = winH;
+        } else {
+            availableHeight = winH - headerH;
+            $videoCon.css('top', headerH + 'px');
+        }
+
         aspectRatio = winW / availableHeight;
 
         $videoCon.css({
             width: winW + 'px',
             height: availableHeight + 'px',
             overflow: 'hidden'
+        });
+
+        if (homeCopyH < (winH - headerH)) {
+            offset = (winH - homeCopyH - headerH) / 2 + headerH;
+            ;
+        } else {
+            offset = 5 * 16;
+        }
+
+        $('.l-home-copy').css({
+            'min-height' : availableHeight + 'px',
+            'padding-top' : offset + 'px'
         });
 
         scaleLayout();
@@ -141,7 +164,6 @@ console.log($loadStudyBtn);
                 .slideUp(function() {
 
                     $studyCon.empty();
-                        console.log('ajax call started');
                         initiateAjaxLoad(earl);
                 });
         } else {
@@ -214,11 +236,16 @@ console.log($loadStudyBtn);
 
     // mindguide dna infographic
     $mindguideInfographicHolder.on('click', function () {
-        $(this).toggleClass('show-other-side');
+        if ( $(window).width() > 720 ) {
+            $(this).toggleClass('show-other-side');    
+        }
+        
     });
 
     $mindguideInfographicHolder.on('mouseenter', function () {
-        $(this).addClass('show-other-side');
+        if ( $(window).width() > 720 ) {
+            $(this).addClass('show-other-side');
+        }
     });
 
     $mindguideInfographicHolder.on('mouseleave', function () {
@@ -259,6 +286,18 @@ console.log($loadStudyBtn);
     // resize events
     $window.resize( function() {
         findAvailableSpace();
+
+        // recalculate positions and start retracking
+        // mindguide and brandembrace animation trigger
+        if ($mindguideIcons.length > 0) {
+            $mindguideIconsPos = $mindguideIcons.offset().top;
+            mindguideIconsTracker = window.setInterval(checkMindguidePos, 100);    
+        }
+
+        if ($brandEmbraceIndex.length > 0) {
+            brandembraceIndexPos = $brandEmbraceIndexCon.offset().top;
+            brandembracePosTrackerTimer = window.setInterval(brandembraceIndexPosTracker, 100);
+        }
     });
 
     $('.l-study-con').on('click', '.close-study', function () {
@@ -304,26 +343,24 @@ console.log($loadStudyBtn);
         window.location = url;
     });
 
-    $teamMember.on('mouseenter', function () {
-        var $this = $(this),
-            $img = $this.find('.team-member-image'),
-            earl = $img.attr('src'),
-            newEarl = $img.data('team-member-image');
-
-        $img.attr('src', newEarl);
-        $img.data('team-member-image', earl);
-        $this.toggleClass('show-rolls');
+    // menu toggle
+    $menuToggle.on('click', function() {
+        $body.toggleClass('nav-shift');
     });
 
-    $teamMember.on('mouseleave', function () {
-        var $this = $(this),
-            $img = $this.find('.team-member-image'),
-            earl = $img.attr('src'),
-            newEarl = $img.data('team-member-image');
+    // menu close button
+    $menuCloseBtn.on('click', function() {
+        $body.removeClass('nav-shift');
+    });
 
-        $img.attr('src', newEarl);
-        $img.data('team-member-image', earl);
-        $this.toggleClass('show-rolls');
+    // team member click replacement for hover on touch
+    $teamMember.on('click', function() {
+        $teamMembers
+            .find('.show-rolls')
+                .removeClass('show-rolls');
+        
+        $(this)
+            .addClass('show-rolls');
     });
 
 
@@ -424,7 +461,7 @@ console.log($loadStudyBtn);
             }
         }
 
-        if ( offy > $(window).height() ) {
+        if ( offy > $window.height() ) {
             if (isBackToTopShowing === false) {
                 $backToTopBtn.addClass('show-back-to-top');
                 isBackToTopShowing = true;

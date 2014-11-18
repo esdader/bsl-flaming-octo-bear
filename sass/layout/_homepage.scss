@@ -5,13 +5,32 @@
 
 .l-home-section {
 	position: relative;
+	left: 0;
+	top: 0;
+	z-index: 1;
+	width: 100%;
+	min-height: 100%;
 }
 
 .l-home-copy {
-	position: absolute;
+	position: relative;
 	left: 0;
 	top: 0;
 	z-index: 10;
 	width: 100%;
-	margin-top: 15%;
+	min-height: 100%;
+	padding-top: 15%;
+
+	@media (max-width: $single-col) {
+		padding-top: 0;
+	}
+}
+
+.video-container {
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 5;
+	width: 100%;
+	min-height: 100%;
 }

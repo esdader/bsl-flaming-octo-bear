@@ -12,6 +12,41 @@
 		<?php endif; ?>
 	</div>
 </div>
+<div class="l-small-view-nav">
+  <header class="l-small-view-nav-header clearfix">
+  	<button class="close-nav-btn js-close-nav-btn">
+  		<img src="<?php bloginfo('template_directory'); ?>/img/x.svg" onerror="this.src='<?php bloginfo('template_directory'); ?>/img/x.png'" alt="Open menu">
+  	</button>
+  </header>
+  <nav class="small-view-nav">
+    <ul class="l-vertical-nav">
+      <li<?php if ($post_id == 13) echo ' class="active"'; ?>>
+        <a href="<?php echo site_url(); ?>">Home</a>
+      </li>
+      <li<?php if ($post_id == 5) echo ' class="active"'; ?>>
+        <a href="<?php echo get_page_link(5); ?>">About</a>
+      </li>
+      <li<?php if ($post_id == 7) echo ' class="active"'; ?>>
+        <a href="<?php echo get_page_link(7); ?>">Tools</a>
+      </li>
+      <li<?php if ($post_id == 9) echo ' class="active"'; ?>>
+        <a href="<?php echo get_page_link(9); ?>">Studies</a>
+      </li>
+      <li<?php if (is_home()) echo ' class="active"'; ?>>
+        <a href="<?php echo get_page_link(11); ?>">News</a>
+      </li>
+      <li>
+        <ul class="l-horizontal-list header-footer-social-media-links gen-social-media-links">
+          <li><a class="header-footer-social-link header-footer-twitter" href="http://twitter.com/BSLinsights" target="_blank">Follow on Twitter</a></li>
+          <li><a class="header-footer-social-link header-footer-linkedin" href="https://www.linkedin.com/company/behavioral-science-lab" target="_blank">Follow on LinkedIn</a></li>
+          <li><a class="header-footer-social-link header-footer-email" href="mailto:contact@behavioralsciencelab.com" target="_blank">Email us</a></li>
+
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</div>
+</div> <!-- end l-shift-con -->
 <button class="back-to-top ir">
 	Back to top
 </button>

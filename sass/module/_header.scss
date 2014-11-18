@@ -8,31 +8,63 @@
 	top: 0;
 	z-index: 90;
 	width: 100%;
-	height: em(154);
-	padding: em(72) em(14) em(14) 0;
+	height: em(135);
+	padding: em(53) em(14) em(14) 0;
 	text-align: right;
 	background-color: $gold;
-	transition-property: height, width, top, left, padding;
-	transition-duration: 300ms;
-
-    img {
-    	display: inline-block;
-    	width: 113px;
-    	height: 68px;
-    	transition-property: height, width, top, left;
-		transition-duration: 300ms;
-    }
+	transition-property: height, width, top, left, padding background-color;
+	transition-duration: 500ms;
 
 	.show-short-view & {
 		padding: em(2) em(10) 0 0;
 		height: em(53);
+		background-color: transparent;
+	}
 
-		img {
-			height: 38px;
-			width: 63px;
-		}
+	@media (max-width: $single-col) {
+		padding: em(2) em(10) 0 0;
+		height: em(53);
+		background-color: transparent;
 	}
 }
+
+
+.main-logo {
+	display: inline-block;
+	width: 113px;
+	height: 68px;
+	transition-property: height, width, top, left opacity;
+	transition-duration: 500ms;
+
+	@media (max-width: $single-col) {
+		display: none;
+	}
+}
+
+.show-short-view .main-logo {
+	opacity: 0;
+	height: 38px;
+	width: 63px;
+}
+
+.small-main-logo {
+	opacity: 0;
+	position: absolute;
+	left: 0;
+	top: 0;
+	transition-property: opacity;
+	transition-duration: 700ms;
+
+	@media (max-width: $single-col) {
+		opacity: 1;
+	}
+}
+
+.show-short-view .small-main-logo {
+	opacity: 1;
+}
+
+
 
 
 
@@ -83,6 +115,44 @@
 
 }
 
+.small-view-nav {
+	> ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	> ul > li {
+		border-top: 1px solid $gold;
+		padding: .5em 0;
+	}
+
+	> ul > li:last-child {
+		border-bottom: 1px solid $gold;
+		padding: 1.25em 0 1.25em 1em;
+	}
+
+	> ul > li > a {
+		line-height: 1;
+		font-size: $e-normal-body;
+		font-weight: $bold;
+		text-transform: uppercase;
+		color: $white;
+		text-decoration: none;
+		letter-spacing: 1px;
+		padding: .75em 0;
+		width: 100%;
+		display: block;
+		text-indent: 1em;
+	}
+	
+	.header-footer-social-link {
+		@extend .ir;
+		font-size: 0;
+	}
+
+}
+
 .blog .main-nav a,
 .page-id-9 .main-nav a {
 	color: #424242;
@@ -113,6 +183,13 @@
 
 	.no-svg & {
 		background-image: url(../img/social_icons.png);
+	}
+}
+
+// this is to get out of the way of menu toggle
+.l-header-social-icons {
+	@media (max-width: 895px) {
+		display: none;
 	}
 }
 

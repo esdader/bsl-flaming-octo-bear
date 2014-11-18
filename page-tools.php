@@ -38,14 +38,11 @@ get_header(); ?>
 					</a>
 				</li>
 				<li>
-					<a href="#add-link">
-						<a href="#brandembrace" class="scroll-to-panel">
-							<img 
-							src="<?php bloginfo('template_directory'); ?>/img/brand_embrace_logo2.svg"
-							onerror="this.src='<?php bloginfo('template_directory'); ?>/img/brand_embrace_logo2.png'"
-							alt="Brand Embrace">
-						</a>
-						
+					<a href="#brandembrace" class="scroll-to-panel">
+						<img 
+						src="<?php bloginfo('template_directory'); ?>/img/brand_embrace_logo2.svg"
+						onerror="this.src='<?php bloginfo('template_directory'); ?>/img/brand_embrace_logo2.png'"
+						alt="Brand Embrace">
 					</a>
 				</li>
 			</ul>
@@ -184,7 +181,7 @@ get_header(); ?>
 						The <strong>BrandEmbrace Index&#8480;</strong> indicates a person’s cumulative experiences with a brand. By identifying all elements that play a role in brand engagement — cognitive, social, environmental and economic — we help our clients’ overall operations become more efficient, more effective and more profitable.
 					</p>
 				</div>
-				<div class="col-3 offset-1 brandembrace-index-col">
+				<div class="col-4 offset-1 brandembrace-index-col">
 					<img 
 						src="<?php bloginfo('template_directory'); ?>/img/Tools_chartGraphic.svg"
 						onerror="this.src='<?php bloginfo('template_directory'); ?>/img/Tools_chartGraphic.png'"

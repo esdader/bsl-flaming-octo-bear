@@ -77,6 +77,12 @@
  		width: 40%;
  		float: left;
  		color: #fff;
+
+ 		@media (max-width: 480px) {
+ 			width: 100%;
+ 			float: none;
+ 			margin-bottom: .25em;
+ 		}
  	}
  	input[type=text],
  	input[type=password] {
@@ -84,6 +90,10 @@
  		border: 2px solid $gold;
  		background: $dark-blue;
  		margin-bottom: .5em;
+ 		@media (max-width: 480px) {
+ 			width: 100%;
+ 			margin-bottom: 1em;
+ 		}
  	}
 
  	input[type=submit] {
@@ -136,6 +146,12 @@
  	background: #ccc;
  	background: rgba(0,0,0, .8);
  }
+
+ .l-registration-inner-con {
+ 	max-width: 480px;
+ 	margin: 0 auto;
+ }
+
 .reg-body {
 	max-height: 210px;
 	overflow-y: auto;

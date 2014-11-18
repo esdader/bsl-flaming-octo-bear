@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title></title>
     <meta name="description" content="">
-    <meta name="viewport" content="width=1020">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <script type="text/javascript">
       WebFontConfig = {
         google: { families: [ 'PT+Sans:400,700,400italic,700italic:latin' ] }
@@ -29,14 +29,16 @@
   <?php
     $post_id = $post->ID;
   ?>
+  <div class="l-shift-con">
   <div class="l-header-con">
     <div class="l-header">
-      <div class="col-2 no-gutters">
+      <div class="l-main-logo-con">
         <div class="main-logo-con">
-          <img class="main-logo" src="<?php echo get_bloginfo('template_directory'); ?>/img/logo.png" alt="<?php echo get_bloginfo('name'); ?>">
+          <a href="<?php echo site_url(); ?>"><img class="main-logo" src="<?php echo get_bloginfo('template_directory'); ?>/img/logo.png" alt="<?php echo get_bloginfo('name'); ?>"></a>
+          <a href="<?php echo site_url(); ?>"><img class="small-main-logo" src="<?php echo get_bloginfo('template_directory'); ?>/img/bsl_mini_logo.svg" onerror="this.src='<?php echo get_bloginfo('template_directory'); ?>/img/bsl_mini_logo.png'" alt="<?php echo get_bloginfo('name'); ?>"></a>
         </div>
       </div>
-      <nav class="col-5 offset-1 main-nav">
+      <nav class="offset-1 main-nav l-main-nav">
         <ul class="l-horizontal-nav">
           <li<?php if ($post_id == 13) echo ' class="active"'; ?>>
             <a href="<?php echo site_url(); ?>">Home</a>
@@ -55,7 +57,7 @@
           </li>
         </ul>
       </nav>
-      <div class="l-header-social-icons col-1 no-gutters offset-2">
+      <div class="l-header-social-icons rt-offset-2">
         <ul class="l-horizontal-list header-footer-social-media-links gen-social-media-links">
           <li><a class="header-footer-social-link header-footer-twitter" href="http://twitter.com/BSLinsights" target="_blank">Follow on Twitter</a></li>
           <li><a class="header-footer-social-link header-footer-linkedin" href="https://www.linkedin.com/company/behavioral-science-lab" target="_blank">Follow on LinkedIn</a></li>
@@ -63,5 +65,8 @@
 
         </ul>
       </div>
+      <button class="menu-toggle js-menu-toggle">
+        <img src="<?php bloginfo('template_directory'); ?>/img/hamburger.svg" onerror="this.src='<?php bloginfo('template_directory'); ?>/img/hamburger.png'" alt="Open menu">
+      </button>
     </div>
   </div>

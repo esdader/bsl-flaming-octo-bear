@@ -15,23 +15,60 @@
 
 .team-member {
 	position: relative;
-	width: 180 / 960 * 100%;
-	margin: em(20) per(70, 960) 0;
+	width: per(320, 960);
+	margin: em(20) 0 0;
+
+	@media (max-width: $single-col) {
+		width: 50%;
+	}
+
+	@media (max-width: 600px) {
+		width: 100%;
+	}
+}
+
+.team-member-con {
+	width: 180px;
+	margin: 0 auto;
+	cursor: pointer;
+	min-height: 248px;
+}
+
+.team-member-image-holder {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	z-index: 5;
+	margin-left: -90px;
+	display: block;
+	width: 180px;
+	height: 248px;
+	background-repeat: no-repeat;
+	background-position: left top;
 }
 
 .team-member-rolls {
 	display: none;
 	position: absolute;
-	left: 0;
+	left: 50%;
 	top: 0;
+	z-index: 10;
+	width: 180px;
+	margin-left: -90px;
 	padding-top: em(40);
 
-	.show-rolls & {
-		display: block;
-	}
+	// .show-rolls & {
+	// 	display: block;
+	// }
 }
 
-.show-rolls .team-member-image {
+.team-member-con:hover .team-member-rolls,
+.show-rolls .team-member-rolls {
+	display: block;
+}
+
+.team-member-con:hover .team-member-image-holder,
+.show-rolls .team-member-image-holder {
 	 -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=25)";
 	opacity: .25;
 }
